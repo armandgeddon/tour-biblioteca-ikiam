@@ -76,294 +76,207 @@
     }
     .minimap-header {
       display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 8px; font-size: 12px; font-weight: 700;
-      color: var(--primary); text-transform: uppercase; letter-spacing: 0.8px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--primary); margin-bottom: 8px;
     }
-    .minimap-header .btn-action {
-      font-size: 11px; color: #fff; background: rgba(0, 229, 255, 0.15);
-      border: 1px solid var(--border-glass); border-radius: 6px;
-      padding: 2px 8px; cursor: pointer; transition: all 0.2s;
+    .minimap-actions {
+      display: flex; gap: 6px;
     }
-    .minimap-header .btn-action:hover {
-      background: var(--primary); color: #000;
+    .minimap-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff; border-radius: 6px; padding: 2px 7px; font-size: 11px;
+      cursor: pointer; transition: all 0.2s;
     }
-    .minimap-box {
-      position: relative; width: 100%; height: 260px;
-      background: #070b14; border-radius: 12px;
-      overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.2);
-      cursor: crosshair;
+    .minimap-btn:hover { background: var(--primary); color: #000; border-color: var(--primary); }
+    .svg-map-wrapper {
+      width: 100%; height: 165px; background: rgba(5, 10, 20, 0.95);
+      border-radius: 10px; overflow: hidden; border: 1px solid rgba(0, 229, 255, 0.15);
+      position: relative;
     }
-    .minimap-svg {
+    .svg-map-wrapper svg {
       width: 100%; height: 100%; display: block;
     }
-
-    /* SVG Map Styling */
-    .svg-wall {
-      stroke: #38bdf8; stroke-width: 0.32; stroke-linecap: round;
-    }
-    .svg-path {
-      stroke: #0284c7; stroke-width: 0.18; stroke-dasharray: 0.5, 0.4;
-      opacity: 0.65;
-    }
-    .svg-zone-label {
-      font-size: 0.85px; font-weight: 700; fill: #64748b;
-      text-anchor: middle; letter-spacing: 0.05px;
-      pointer-events: none; text-transform: uppercase;
-    }
-    .svg-node {
+    .map-station-dot {
       cursor: pointer; transition: transform 0.2s;
     }
-    .svg-node circle.node-bg {
-      fill: #0284c7; stroke: #ffffff; stroke-width: 0.25;
-      transition: all 0.2s ease;
-    }
-    .svg-node:hover circle.node-bg {
-      fill: #00e5ff; stroke: #ffffff; stroke-width: 0.4;
-      filter: drop-shadow(0 0 0.8px #00e5ff);
-    }
-    .svg-node.active circle.node-bg {
-      fill: #10b981; stroke: #ffffff; stroke-width: 0.45;
-      filter: drop-shadow(0 0 1.2px #10b981);
-    }
-    .svg-node text {
-      font-size: 0.95px; font-weight: 900; fill: #ffffff;
-      text-anchor: middle; dominant-baseline: central;
-      pointer-events: none;
-    }
-    .svg-radar-cone {
-      pointer-events: none; transition: transform 0.04s linear;
+    .map-station-dot:hover {
+      transform: scale(1.4);
     }
 
-    /* ==================== EXPANDED FLOORPLAN MODAL ==================== */
-    .map-modal-overlay {
-      position: absolute; inset: 0; background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(14px); z-index: 60; display: flex;
-      align-items: center; justify-content: center; opacity: 0;
-      pointer-events: none; transition: opacity 0.3s ease;
-    }
-    .map-modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .map-modal-card {
-      background: #0a0f1d; border: 1px solid var(--primary);
-      border-radius: 20px; padding: 20px; width: 92vw; max-width: 900px;
-      height: 88vh; max-height: 820px; display: flex; flex-direction: column;
-      box-shadow: 0 24px 60px rgba(0, 229, 255, 0.25); position: relative;
-    }
-    .map-modal-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .map-modal-header h2 {
-      font-size: 18px; color: var(--primary); display: flex; align-items: center; gap: 8px;
-    }
-    .map-modal-content {
-      flex: 1; position: relative; background: #060911; border-radius: 12px;
-      overflow: hidden; border: 1px solid rgba(255,255,255,0.08);
-    }
-    .map-modal-content svg {
-      width: 100%; height: 100%;
-    }
-
-    /* ==================== DIRECTION & NEXT-STEP GUIDE BADGE ==================== */
-    .direction-guide {
+    /* ==================== ASSISTED NAVIGATION PILLS ==================== */
+    .assist-nav {
       position: absolute; bottom: 84px; left: 50%; transform: translateX(-50%);
-      z-index: 22; display: flex; align-items: center; gap: 8px;
-      background: var(--bg-glass); backdrop-filter: blur(14px);
+      z-index: 20; display: flex; gap: 10px; pointer-events: auto;
+    }
+    .assist-pill {
+      background: var(--bg-glass); backdrop-filter: blur(10px);
       border: 1px solid var(--border-glass); border-radius: 30px;
-      padding: 8px 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-      pointer-events: auto; max-width: 90vw; flex-wrap: wrap; justify-content: center;
+      padding: 8px 16px; font-size: 13px; font-weight: 600; color: #fff;
+      cursor: pointer; display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6); transition: all 0.2s;
     }
-    .guide-title {
-      font-size: 11px; font-weight: 700; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: 0.8px; margin-right: 4px;
+    .assist-pill:hover {
+      background: rgba(0, 229, 255, 0.25); border-color: var(--primary);
+      transform: translateY(-2px); box-shadow: 0 10px 28px var(--primary-glow);
     }
-    .guide-pill {
-      background: rgba(0, 229, 255, 0.12); border: 1px solid var(--border-glass);
-      color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px;
-      font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .guide-pill:hover {
-      background: var(--primary); color: #000; transform: translateY(-2px);
-      box-shadow: 0 4px 12px var(--primary-glow);
-    }
-    .guide-pill .pill-arrow { color: var(--primary); }
-    .guide-pill:hover .pill-arrow { color: #000; }
 
-    /* ==================== FLOATING BOTTOM CONTROL DOCK ==================== */
+    /* ==================== BOTTOM FLOATING DOCK ==================== */
     .bottom-dock {
-      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-      z-index: 25; display: flex; align-items: center; gap: 10px;
-      background: var(--bg-glass); backdrop-filter: blur(16px);
-      border: 1px solid var(--border-glass); border-radius: 50px;
-      padding: 8px 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.8);
-      pointer-events: auto;
+      position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
+      z-index: 20; background: var(--bg-glass); backdrop-filter: blur(16px);
+      border: 1px solid var(--border-glass); border-radius: 40px;
+      padding: 6px 14px; display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.85); pointer-events: auto;
     }
     .dock-btn {
-      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #fff; width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative; font-size: 18px;
+      background: transparent; border: none; outline: none;
+      width: 42px; height: 42px; border-radius: 50%;
+      color: #cbd5e1; font-size: 17px; display: flex; align-items: center;
+      justify-content: center; cursor: pointer; transition: all 0.2s;
+      position: relative;
     }
     .dock-btn:hover {
-      background: var(--primary); color: #000;
-      border-color: var(--primary); transform: translateY(-3px) scale(1.08);
-      box-shadow: 0 8px 20px var(--primary-glow);
+      background: rgba(0, 229, 255, 0.2); color: var(--primary);
+      transform: translateY(-2px);
     }
     .dock-btn.active {
       background: var(--primary); color: #000;
       box-shadow: 0 0 16px var(--primary-glow);
     }
-    .dock-btn .tooltip {
-      position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%);
-      background: rgba(15, 23, 42, 0.95); border: 1px solid var(--border-glass);
-      color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px;
-      font-weight: 600; white-space: nowrap; pointer-events: none;
-      opacity: 0; transition: opacity 0.2s, transform 0.2s;
-    }
-    .dock-btn:hover .tooltip {
-      opacity: 1; transform: translateX(-50%) translateY(-2px);
+    .dock-divider {
+      width: 1px; height: 24px; background: rgba(255, 255, 255, 0.15);
+      margin: 0 4px;
     }
 
-    /* ==================== SCENE THUMBNAILS CAROUSEL ==================== */
-    .thumbnails-drawer {
-      position: absolute; bottom: 136px; left: 50%; transform: translateX(-50%);
-      z-index: 24; background: var(--bg-glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border-glass); border-radius: 16px;
-      padding: 12px 16px; display: flex; gap: 12px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.85);
+    /* ==================== THUMBNAIL CAROUSEL ==================== */
+    .carousel-tray {
+      position: absolute; bottom: 82px; left: 50%; transform: translateX(-50%);
+      z-index: 20; background: var(--bg-glass); backdrop-filter: blur(18px);
+      border: 1px solid var(--border-glass); border-radius: 20px;
+      padding: 12px 16px; display: flex; gap: 14px; max-width: 90vw;
+      overflow-x: auto; scrollbar-width: none; box-shadow: 0 20px 50px rgba(0,0,0,0.9);
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      opacity: 0; transform: translateX(-50%) translateY(20px);
-      pointer-events: none; max-width: 90vw; overflow-x: auto;
-    }
-    .thumbnails-drawer.open {
-      opacity: 1; transform: translateX(-50%) translateY(0);
       pointer-events: auto;
     }
-    .thumb-card {
-      flex: 0 0 110px; cursor: pointer; border-radius: 10px;
-      overflow: hidden; border: 2px solid transparent;
-      transition: all 0.25s ease; position: relative; background: #1e293b;
+    .carousel-tray::-webkit-scrollbar { display: none; }
+    .carousel-tray.hidden {
+      opacity: 0; transform: translate(-50%, 40px); pointer-events: none;
     }
-    .thumb-card img {
-      width: 100%; height: 64px; object-fit: cover; display: block;
+    .carousel-item {
+      flex: 0 0 130px; display: flex; flex-direction: column; align-items: center;
+      cursor: pointer; position: relative; border-radius: 12px; overflow: hidden;
+      border: 2px solid transparent; transition: all 0.25s;
     }
-    .thumb-card .thumb-label {
-      padding: 4px 6px; font-size: 10px; font-weight: 600;
-      text-align: center; white-space: nowrap; overflow: hidden;
-      text-overflow: ellipsis; background: rgba(15, 23, 42, 0.95);
+    .carousel-item img {
+      width: 100%; height: 75px; object-fit: cover; display: block;
+      border-radius: 10px; transition: transform 0.3s;
     }
-    .thumb-card:hover {
-      border-color: var(--primary); transform: translateY(-4px);
-      box-shadow: 0 6px 16px var(--primary-glow);
+    .carousel-item .item-label {
+      font-size: 11px; font-weight: 600; text-align: center;
+      margin-top: 6px; color: #cbd5e1; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; width: 100%;
     }
-    .thumb-card.active {
-      border-color: var(--primary);
-      box-shadow: 0 0 14px var(--primary-glow);
+    .carousel-item:hover {
+      border-color: var(--primary); transform: translateY(-3px) scale(1.08);
     }
-    .thumb-card.active .thumb-label {
+    .carousel-item.active {
+      border-color: var(--primary); box-shadow: 0 0 18px var(--primary-glow);
+    }
+    .carousel-item.active .item-label {
       color: var(--primary); font-weight: 700;
     }
 
-    /* ==================== 3D HOTSPOT TOOLTIP ==================== */
+    /* ==================== EXPANDED MINIMAP MODAL ==================== */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px); display: none; align-items: center;
+      justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-card {
+      background: var(--bg-glass); border: 1px solid var(--border-glass);
+      border-radius: 24px; padding: 24px; width: 100%; max-width: 850px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.9); position: relative;
+    }
+    .modal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 16px;
+    }
+    .modal-header h2 {
+      font-size: 17px; font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .close-btn {
+      background: rgba(255, 255, 255, 0.1); border: none; color: #fff;
+      width: 32px; height: 32px; border-radius: 50%; font-size: 16px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .close-btn:hover { background: #ef4444; }
+
+    /* ==================== 3D GROUND HOTSPOT TOOLTIP ==================== */
     #hotspot-tooltip {
       position: absolute; z-index: 30; pointer-events: none;
-      background: rgba(15, 23, 42, 0.95); border: 1px solid var(--primary);
-      padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
-      color: #fff; box-shadow: 0 8px 24px rgba(0, 229, 255, 0.35);
-      transform: translate(-50%, -100%); margin-top: -18px;
-      opacity: 0; transition: opacity 0.2s ease, transform 0.2s ease;
-      display: flex; align-items: center; gap: 6px;
+      background: var(--bg-glass); backdrop-filter: blur(14px);
+      border: 1px solid var(--border-glass); border-radius: 12px;
+      padding: 10px 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.85);
+      font-size: 12px; color: #fff; max-width: 240px; text-align: center;
+      opacity: 0; transform: translate(-50%, -100%) scale(0.9);
+      transition: opacity 0.2s, transform 0.2s;
     }
     #hotspot-tooltip.visible {
       opacity: 1; transform: translate(-50%, -100%) scale(1.05);
     }
-    #hotspot-tooltip .arrow-icon {
-      color: var(--primary); font-size: 14px;
+    #hotspot-tooltip .tt-title {
+      font-weight: 700; color: var(--primary); font-size: 13px; margin-bottom: 3px;
     }
-
-    /* ==================== INFO MODAL ==================== */
-    .modal-overlay {
-      position: absolute; inset: 0; background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px); z-index: 50; display: flex;
-      align-items: center; justify-content: center; opacity: 0;
-      pointer-events: none; transition: opacity 0.3s ease;
+    #hotspot-tooltip .tt-desc {
+      color: var(--text-muted); font-size: 11px; margin-bottom: 4px;
     }
-    .modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .modal-card {
-      background: #0f172a; border: 1px solid var(--border-glass);
-      border-radius: 20px; padding: 28px; max-width: 520px; width: 90%;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.9); position: relative;
-    }
-    .modal-card h2 {
-      font-size: 20px; color: var(--primary); margin-bottom: 12px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .modal-card p {
-      font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;
-    }
-    .modal-card .meta-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-      background: rgba(255,255,255,0.04); padding: 14px; border-radius: 12px;
-      margin-bottom: 20px; font-size: 13px;
-    }
-    .modal-card .meta-item strong { color: #fff; display: block; }
-    .modal-card .close-btn {
-      background: var(--primary); color: #000; border: none;
-      padding: 10px 24px; border-radius: 30px; font-weight: 700;
-      cursor: pointer; float: right; transition: all 0.2s;
-    }
-    .modal-card .close-btn:hover {
-      transform: scale(1.05); box-shadow: 0 4px 16px var(--primary-glow);
+    #hotspot-tooltip .tt-dist {
+      font-size: 11px; font-weight: 700; color: #10b981;
+      background: rgba(16, 185, 129, 0.15); border-radius: 12px;
+      padding: 2px 8px; display: inline-block;
     }
   </style>
-  <script src="three.min.js"></script>
 </head>
 <body>
 
-  <!-- 3D WebGL Canvas -->
+  <!-- 360 WebGL Canvas Container -->
   <div id="pano-container"></div>
 
-  <!-- Header Branding -->
-  <div class="top-brand">
-    <h1><span class="pulse-dot"></span> Ikiam Virtual Experience</h1>
-    <div class="location-title" id="location-name">1. Entrada y Mostrador de Recepción</div>
-    <div class="location-desc" id="location-desc">Acceso por la puerta principal. Al frente: corredor central hacia mesas.</div>
+  <!-- 3D Hotspot Hover Tooltip -->
+  <div id="hotspot-tooltip">
+    <div class="tt-title">Destino</div>
+    <div class="tt-desc">Descripción</div>
+    <div class="tt-dist">0.0 m</div>
   </div>
 
-  <!-- Compass Indicator -->
+  <!-- Top Branding Badge -->
+  <div class="top-brand">
+    <h1><span class="pulse-dot"></span> Ikiam 360° LiDAR Real</h1>
+    <div class="location-title" id="location-name">Cargando estación...</div>
+    <div class="location-desc" id="location-desc">Recorrido inmersivo Panotour Pro</div>
+  </div>
+
+  <!-- Compass HUD -->
   <div class="compass-hud">
-    <span style="font-size: 14px;">🧭</span>
+    <span>🧭</span>
     <span id="heading-display">OESTE 0°</span>
   </div>
 
-  <!-- Vector SVG Minimap Panel -->
+  <!-- Vector SVG Minimap (Top Right) -->
   <div class="minimap-panel" id="minimap-panel">
     <div class="minimap-header">
-      <span>Plano Arquitectónico</span>
-      <div style="display: flex; gap: 6px;">
-        <button class="btn-action" onclick="openExpandedMap()">⛶ Ampliar</button>
-        <button class="btn-action" onclick="toggleMinimap()">✕</button>
+      <span>📐 Plano Arquitectónico</span>
+      <div class="minimap-actions">
+        <button class="minimap-btn" onclick="openExpandedMap()">⛶ Ampliar</button>
+        <button class="minimap-btn" onclick="toggleMinimap()">✖</button>
       </div>
     </div>
-    <div class="minimap-box" onclick="openExpandedMap()" title="Clic para ampliar plano">
-      <svg viewBox="0 0 22.50 24.00" class="minimap-svg" id="minimap-svg-main">
-        <defs>
-          <radialGradient id="radar-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.85"/>
-            <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.0"/>
-          </radialGradient>
-        </defs>
-
-        <!-- Floor Plan Zone Labels -->
-        <text x="18.0" y="20.0" class="svg-zone-label">Acceso</text>
-        <text x="13.5" y="22.2" class="svg-zone-label">Casilleros</text>
-        <text x="9.0" y="20.0" class="svg-zone-label">Mesas de Estudio</text>
-        <text x="8.5" y="11.5" class="svg-zone-label">Estanterías</text>
-        <text x="4.5" y="6.0" class="svg-zone-label">Acervo Interior</text>
-
-        <!-- Walls -->
-        <g id="svg-walls-group">
+    <div class="svg-map-wrapper">
+      <svg id="minimap-svg" viewBox="0 0 22.50 24.00">
+        <!-- Architectural Walls from LiDAR -->
+        <g id="svg-walls">
           <line x1="5.07" y1="22.88" x2="7.62" y2="22.88" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
       <line x1="16.58" y1="15.18" x2="16.26" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
       <line x1="9.57" y1="15.19" x2="9.57" y2="14.91" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
@@ -396,123 +309,127 @@
       <line x1="16.26" y1="14.90" x2="16.26" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
       <line x1="16.58" y1="14.90" x2="16.58" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
         </g>
-
-        <!-- Dynamic Navigation Links Between Stations -->
-        <g id="svg-links-group"></g>
-
-        <!-- Active Radar Cone (Base points UP at 270 deg. Rotating by -90 points West/Left at lon=0) -->
-        <g id="svg-radar-cone" class="svg-radar-cone" transform="translate(18.0, 18.5) rotate(-90)">
-          <path d="M 0 0 L -2.5 -5 A 5.5 5.5 0 0 1 2.5 -5 Z" fill="url(#radar-glow)"/>
-          <line x1="0" y1="0" x2="0" y2="-5.5" stroke="#00e5ff" stroke-width="0.15" stroke-dasharray="0.3,0.3"/>
-        </g>
-
+        <!-- Directional Radar Cone -->
+        <path id="svg-radar-cone" d="M 0 0 L -2.2 -4.8 A 5.2 5.2 0 0 1 2.2 -4.8 Z" fill="rgba(0, 229, 255, 0.45)" stroke="rgba(0, 229, 255, 0.9)" stroke-width="0.15" />
         <!-- Station Nodes -->
-        <g id="svg-nodes-group"></g>
+        <g id="svg-stations">
+          <!-- Injected via JS -->
+        </g>
       </svg>
     </div>
   </div>
 
-  <!-- Direction / Next Step Guidance Badge -->
-  <div class="direction-guide" id="direction-guide">
-    <span class="guide-title">Siguiente Paso:</span>
-    <div id="guide-pills-container" style="display: flex; gap: 8px;"></div>
+  <!-- Assisted Navigation Forward Pills -->
+  <div class="assist-nav" id="assist-nav">
+    <!-- Injected dynamically -->
   </div>
 
-  <!-- Scene Thumbnails Carousel -->
-  <div class="thumbnails-drawer" id="thumbnails-drawer"></div>
+  <!-- Thumbnail Carousel Tray -->
+  <div class="carousel-tray hidden" id="carousel-tray">
+    <!-- Injected dynamically -->
+  </div>
 
-  <!-- Floating Bottom Control Dock -->
+  <!-- Bottom Glassmorphism Control Dock -->
   <div class="bottom-dock">
-    <button class="dock-btn" id="btn-thumbs" onclick="toggleThumbnails()">
-      🖼️<span class="tooltip">Galería de Salas</span>
-    </button>
-    <button class="dock-btn active" id="btn-map" onclick="toggleMinimap()">
-      🗺️<span class="tooltip">Plano / Minimapa</span>
-    </button>
-    <button class="dock-btn" onclick="openExpandedMap()">
-      ⛶<span class="tooltip">Ampliar Plano</span>
-    </button>
-    <button class="dock-btn" id="btn-rotate" onclick="toggleAutoRotate()">
-      🔄<span class="tooltip">Giro Automático</span>
-    </button>
-    <button class="dock-btn" onclick="zoomIn()">
-      ➕<span class="tooltip">Acercar (Zoom)</span>
-    </button>
-    <button class="dock-btn" onclick="zoomOut()">
-      ➖<span class="tooltip">Alejar (Zoom)</span>
-    </button>
-    <button class="dock-btn" onclick="resetView()">
-      👁️<span class="tooltip">Centrar Vista</span>
-    </button>
-    <button class="dock-btn" onclick="toggleFullscreen()">
-      🖥️<span class="tooltip">Pantalla Completa</span>
-    </button>
-    <button class="dock-btn" onclick="openInfoModal()">
-      ℹ️<span class="tooltip">Ficha Técnica</span>
-    </button>
+    <button class="dock-btn" id="btn-thumbs" onclick="toggleCarousel()" title="Ver Escenas">🖼️</button>
+    <button class="dock-btn" id="btn-map" onclick="toggleMinimap()" title="Plano 2D">🗺️</button>
+    <div class="dock-divider"></div>
+    <button class="dock-btn" id="btn-rotate" onclick="toggleAutoRotate()" title="Rotación Automática">🔄</button>
+    <button class="dock-btn" onclick="zoomIn()" title="Acercar">🔍+</button>
+    <button class="dock-btn" onclick="zoomOut()" title="Alejar">🔍-</button>
+    <button class="dock-btn" onclick="resetView()" title="Centrar Vista">🎯</button>
+    <div class="dock-divider"></div>
+    <button class="dock-btn" onclick="toggleFullscreen()" title="Pantalla Completa">⛶</button>
+    <button class="dock-btn" onclick="openInfoModal()" title="Ficha Técnica">ℹ️</button>
   </div>
 
-  <!-- 3D Hotspot Hover Tooltip -->
-  <div id="hotspot-tooltip">
-    <span class="arrow-icon">➔</span>
-    <span id="tooltip-text">Avanzar a Sala</span>
-  </div>
-
-  <!-- Expanded Floorplan Modal -->
-  <div class="map-modal-overlay" id="map-modal" onclick="closeExpandedMap(event)">
-    <div class="map-modal-card">
-      <div class="map-modal-header">
-        <h2>🏛️ Plano Arquitectónico de Precisión — Biblioteca Ikiam</h2>
-        <button class="close-btn" style="background:#00e5ff; color:#000; border:none; padding:6px 16px; border-radius:20px; font-weight:700; cursor:pointer;" onclick="closeExpandedMap()">Cerrar ✕</button>
+  <!-- Modal: Expanded Architectural Map -->
+  <div class="modal-overlay" id="map-modal" onclick="closeExpandedMap(event)">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Plano Arquitectónico General - Biblioteca Ikiam</h2>
+        <button class="close-btn" onclick="closeExpandedMap()">✕</button>
       </div>
-      <div class="map-modal-content">
-        <svg viewBox="0 0 22.50 24.00" id="minimap-svg-expanded" style="width:100%; height:100%;">
-          <!-- Cloned SVG elements will be synced here -->
+      <div style="width: 100%; height: 420px; background: rgba(5,10,20,0.98); border-radius: 14px; border: 1px solid var(--border-glass); overflow: hidden;">
+        <svg id="minimap-svg-expanded" viewBox="0 0 22.50 24.00" style="width: 100%; height: 100%;">
+          <g><line x1="5.07" y1="22.88" x2="7.62" y2="22.88" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="16.58" y1="15.18" x2="16.26" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.57" y1="15.19" x2="9.57" y2="14.91" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="19.77" x2="19.12" y2="22.87" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="7.65" y1="1.03" x2="8.94" y2="1.03" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="5.07" y1="16.28" x2="5.07" y2="22.88" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="7.66" y1="9.21" x2="7.65" y2="1.03" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="1.41" y1="9.21" x2="7.66" y2="9.21" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.67" y1="10.78" x2="9.67" y2="9.20" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.24" y1="15.19" x2="10.17" y2="13.03" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.25" y1="23.08" x2="7.62" y2="23.08" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="1.41" y1="9.21" x2="1.41" y2="16.28" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.25" y1="23.08" x2="9.25" y2="22.28" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="8.94" y1="1.03" x2="8.94" y2="9.20" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="8.94" y1="9.20" x2="9.67" y2="9.20" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="10.74" y1="22.28" x2="9.25" y2="22.28" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.57" y1="15.19" x2="9.24" y2="15.19" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="14.90" x2="16.58" y2="14.90" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="17.38" x2="21.71" y2="17.38" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="5.07" y1="16.28" x2="1.41" y2="16.28" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="21.71" y1="19.76" x2="21.71" y2="17.38" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="22.87" x2="10.74" y2="22.87" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="9.57" y1="14.91" x2="16.26" y2="14.90" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="19.77" x2="21.71" y2="19.76" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="10.74" y1="22.28" x2="10.74" y2="22.87" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="10.17" y1="10.78" x2="9.67" y2="10.78" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="7.62" y1="23.08" x2="7.62" y2="22.88" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="19.12" y1="14.90" x2="19.12" y2="17.38" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="10.17" y1="10.78" x2="10.17" y2="13.03" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="16.26" y1="14.90" x2="16.26" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" />
+      <line x1="16.58" y1="14.90" x2="16.58" y2="15.18" stroke="#38bdf8" stroke-width="0.32" stroke-linecap="round" /></g>
+          <path id="svg-radar-cone-exp" d="M 0 0 L -2.2 -4.8 A 5.2 5.2 0 0 1 2.2 -4.8 Z" fill="rgba(0, 229, 255, 0.45)" stroke="rgba(0, 229, 255, 0.9)" stroke-width="0.15" />
+          <g id="svg-stations-exp"></g>
         </svg>
       </div>
+      <div style="margin-top: 14px; display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted);">
+        <span>🔴 Nodo Activo / 🔵 Estaciones de Escaneo</span>
+        <span>Coordenadas exactas LiDAR Pro3 (Precisión métrica $0 USD)</span>
+      </div>
     </div>
   </div>
 
-  <!-- Information Modal -->
+  <!-- Modal: Technical Specs -->
   <div class="modal-overlay" id="info-modal" onclick="closeInfoModal(event)">
-    <div class="modal-card">
-      <h2>🏛️ Biblioteca General Ikiam</h2>
-      <p>Recorrido Virtual 360° de Alta Precisión generado a partir de fotogrametría LiDAR con escáner Matterport Pro3. Espacio digitalizado con continuidad espacial completa, geolocalización métrica de estaciones y visualización WebGL GPU.</p>
-      <div class="meta-grid">
-        <div class="meta-item"><strong>Institución:</strong> Univ. Regional Amazónica Ikiam</div>
-        <div class="meta-item"><strong>Hardware:</strong> Matterport Pro3 LiDAR</div>
-        <div class="meta-item"><strong>Estaciones:</strong> 7 Escaneos Métricos 4K</div>
-        <div class="meta-item"><strong>Motor Gráfico:</strong> Three.js / WebGL Nativo</div>
-        <div class="meta-item"><strong>Resolución:</strong> 4096 x 2048 Equirrectangular</div>
-        <div class="meta-item"><strong>Costo Operativo:</strong> $0.00 USD (Open Assets)</div>
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header">
+        <h2>Ficha Técnica del Espacio</h2>
+        <button class="close-btn" onclick="closeInfoModal()">✕</button>
       </div>
-      <button class="close-btn" onclick="closeInfoModal()">Cerrar</button>
+      <div style="font-size: 13px; color: #e2e8f0; line-height: 1.6;">
+        <p><strong>Edificio:</strong> Biblioteca - Universidad Regional Amazónica Ikiam</p>
+        <p><strong>Dispositivo de Captura:</strong> Matterport Pro3 LiDAR</p>
+        <p><strong>Resolución de Textura:</strong> 4K Equirectangular (Ultra HD)</p>
+        <p><strong>Estaciones Únicas Verificadas:</strong> 7 escaneos auténticos</p>
+        <p><strong>Topología:</strong> Geometría vectorial OGC calibrada a muros estructurales</p>
+        <p><strong>Alineación Angular:</strong> Esferas orientadas a vector unitario común (Oeste = Corredor)</p>
+      </div>
     </div>
   </div>
+
+  <!-- Include Three.js -->
+  <script src="three.min.js"></script>
 
   <script>
-    // ==================== DATA & CONFIGURATION ====================
+    // ==================== STATIONS DATABASE ====================
     const STATIONS = [
   {
     "id": "scan_01",
     "name": "1. Entrada y Mostrador de Recepción",
-    "zone": "Puerta de Entrada Principal",
-    "corridor": "Corredor Principal de Acceso (Inicio)",
+    "zone": "Acceso Principal y Casilleros",
     "file4k": "Panoramas_4K/Scan_01_Entrada_Recepcion.jpg",
-    "file8k": "Panoramas_360/Scan_01_Entrada_Recepcion.jpg",
-    "desc": "Acceso por la puerta principal. Al frente: corredor central hacia mesas. Atrás: puerta de vidrio al exterior.",
     "x": -0.003,
     "y": -0.018,
     "z": 1.382,
-    "mapPos": {
-      "x": 80.0,
-      "y": 77.2
-    },
-    "initialYaw": 0.0,
+    "rotY": 13.0,
     "neighbors": [
       {
         "targetIdx": 1,
-        "id": "scan_02",
         "name": "2. Recepción y Casilleros de Estudiantes",
         "zone": "Zona de Casilleros y Mostrador",
         "dist": "4.37 m",
@@ -522,42 +439,33 @@
       },
       {
         "targetIdx": 2,
-        "id": "scan_03",
         "name": "3. Sala Central de Lectura y Estudio",
-        "zone": "Sala Central de Mesas de Trabajo",
+        "zone": "Mesas de Estudio y Modelos Entomológicos",
         "dist": "8.88 m",
         "desc": "Avanzar directo a Sala Central de Lectura",
         "yaw": -0.3,
         "pitch": -7.1
       }
     ],
-    "svgX": 18.0,
-    "svgY": 18.52,
+    "index": 0,
     "thumb": "Media/panorama_check_all/pano_1_thumb.jpg",
-    "index": 0
+    "svgX": 18.0,
+    "svgY": 18.52
   },
   {
     "id": "scan_02",
     "name": "2. Recepción y Casilleros de Estudiantes",
     "zone": "Zona de Casilleros y Mostrador",
-    "corridor": "Corredor Principal de Acceso (Medio)",
     "file4k": "Panoramas_4K/Scan_02_Recepcion_Casilleros.jpg",
-    "file8k": "Panoramas_360/Scan_02_Recepcion_Casilleros.jpg",
-    "desc": "Pasillo central entre mostrador de atención y casilleros estudiantiles.",
     "x": -4.375,
     "y": -0.024,
     "z": 1.383,
-    "mapPos": {
-      "x": 60.6,
-      "y": 77.2
-    },
-    "initialYaw": 0.0,
+    "rotY": 49.0,
     "neighbors": [
       {
         "targetIdx": 0,
-        "id": "scan_01",
         "name": "1. Entrada y Mostrador de Recepción",
-        "zone": "Puerta de Entrada Principal",
+        "zone": "Acceso Principal y Casilleros",
         "dist": "4.37 m",
         "desc": "Regresar a la Puerta de Entrada",
         "yaw": 179.9,
@@ -565,40 +473,31 @@
       },
       {
         "targetIdx": 2,
-        "id": "scan_03",
         "name": "3. Sala Central de Lectura y Estudio",
-        "zone": "Sala Central de Mesas de Trabajo",
+        "zone": "Mesas de Estudio y Modelos Entomológicos",
         "dist": "4.51 m",
         "desc": "Continuar a Sala Central de Lectura",
         "yaw": -0.4,
         "pitch": -13.7
       }
     ],
-    "svgX": 13.62,
-    "svgY": 18.52,
+    "index": 1,
     "thumb": "Media/panorama_check_all/pano_2_thumb.jpg",
-    "index": 1
+    "svgX": 13.62,
+    "svgY": 18.52
   },
   {
     "id": "scan_03",
     "name": "3. Sala Central de Lectura y Estudio",
-    "zone": "Sala Central de Mesas de Trabajo",
-    "corridor": "Bifurcación: Inicio de Corredor hacia Estanterías",
+    "zone": "Mesas de Estudio y Modelos Entomológicos",
     "file4k": "Panoramas_4K/Scan_03_Mesas_Estudio_Central.jpg",
-    "file8k": "Panoramas_360/Scan_03_Mesas_Estudio_Central.jpg",
-    "desc": "Amplia zona de mesas compartidas. A la derecha inicia el corredor de estanterías y libros.",
     "x": -8.883,
     "y": -0.059,
     "z": 1.38,
-    "mapPos": {
-      "x": 40.5,
-      "y": 77.3
-    },
-    "initialYaw": 0.0,
+    "rotY": 15.0,
     "neighbors": [
       {
         "targetIdx": 1,
-        "id": "scan_02",
         "name": "2. Recepción y Casilleros de Estudiantes",
         "zone": "Zona de Casilleros y Mostrador",
         "dist": "4.51 m",
@@ -608,211 +507,171 @@
       },
       {
         "targetIdx": 3,
-        "id": "scan_04",
         "name": "4. Inicio de Corredor hacia Estanterías",
-        "zone": "Entrada al Acervo Bibliográfico",
+        "zone": "Corredor Norte hacia Acervo Bibliográfico",
         "dist": "2.87 m",
-        "desc": "Ingresar al Corredor de Estanterías (Derecha)",
+        "desc": "Ingresar al Corredor de Estanterías",
         "yaw": 76.7,
-        "pitch": -20.8
+        "pitch": -21.0
       },
       {
         "targetIdx": 4,
-        "id": "scan_05",
         "name": "5. Pasillo Principal de Libros A",
-        "zone": "Estanterías de Consulta General",
+        "zone": "Estanterías Científicas y Generales",
         "dist": "3.40 m",
         "desc": "Pasillo Principal de Libros A",
         "yaw": 51.9,
-        "pitch": -18.0
+        "pitch": -17.9
       }
     ],
-    "svgX": 9.12,
-    "svgY": 18.56,
+    "index": 2,
     "thumb": "Media/panorama_check_all/pano_3_thumb.jpg",
-    "index": 2
+    "svgX": 9.12,
+    "svgY": 18.56
   },
   {
     "id": "scan_04",
     "name": "4. Inicio de Corredor hacia Estanterías",
-    "zone": "Entrada al Acervo Bibliográfico",
-    "corridor": "Inicio Pasillo Estanterías (Empieza aquí)",
+    "zone": "Corredor Norte hacia Acervo Bibliográfico",
     "file4k": "Panoramas_4K/Scan_04_Corredor_Estanterias.jpg",
-    "file8k": "Panoramas_360/Scan_04_Corredor_Estanterias.jpg",
-    "desc": "Punto de inicio del corredor de estanterías. Hacia la izquierda: pasillos de libros A y B.",
     "x": -9.546,
     "y": 2.735,
     "z": 1.388,
-    "mapPos": {
-      "x": 37.6,
-      "y": 65.7
-    },
-    "initialYaw": 0.0,
+    "rotY": 55.0,
     "neighbors": [
       {
         "targetIdx": 2,
-        "id": "scan_03",
         "name": "3. Sala Central de Lectura y Estudio",
-        "zone": "Sala Central de Mesas de Trabajo",
+        "zone": "Mesas de Estudio y Modelos Entomológicos",
         "dist": "2.87 m",
         "desc": "Regresar a Sala Central de Lectura",
         "yaw": -103.3,
-        "pitch": -21.1
+        "pitch": -21.0
       },
       {
         "targetIdx": 4,
-        "id": "scan_05",
         "name": "5. Pasillo Principal de Libros A",
-        "zone": "Estanterías de Consulta General",
+        "zone": "Estanterías Científicas y Generales",
         "dist": "1.44 m",
-        "desc": "Entrar a Pasillo de Libros A",
+        "desc": "Avanzar a Pasillo de Libros A",
         "yaw": -4.6,
-        "pitch": -37.6
+        "pitch": -37.3
       },
       {
         "targetIdx": 5,
-        "id": "scan_06",
         "name": "6. Pasillo de Libros B (Extintor y Revistero)",
-        "zone": "Estanterías de Ciencias y Revistas",
+        "zone": "Zona de Extintor y Acervo Especializado",
         "dist": "2.87 m",
-        "desc": "Pasillo de Libros B / Extintor",
+        "desc": "Avanzar a Pasillo de Libros B / Extintor",
         "yaw": -5.1,
-        "pitch": -21.2
+        "pitch": -20.9
       }
     ],
-    "svgX": 8.45,
-    "svgY": 15.77,
+    "index": 3,
     "thumb": "Media/panorama_check_all/pano_4_thumb.jpg",
-    "index": 3
+    "svgX": 8.45,
+    "svgY": 15.77
   },
   {
     "id": "scan_05",
     "name": "5. Pasillo Principal de Libros A",
-    "zone": "Estanterías de Consulta General",
-    "corridor": "Pasillo de Libros A (Estanterías de Álgebra y Cálculo)",
+    "zone": "Estanterías Científicas y Generales",
     "file4k": "Panoramas_4K/Scan_05_Pasillo_Estanterias_A.jpg",
-    "file8k": "Panoramas_360/Scan_05_Pasillo_Estanterias_A.jpg",
-    "desc": "Pasillo flanqueado por estanterías de matemáticas, física y ciencias exactas.",
     "x": -10.983,
     "y": 2.62,
     "z": 1.377,
-    "mapPos": {
-      "x": 31.2,
-      "y": 66.2
-    },
-    "initialYaw": 0.0,
+    "rotY": 56.0,
     "neighbors": [
       {
         "targetIdx": 3,
-        "id": "scan_04",
         "name": "4. Inicio de Corredor hacia Estanterías",
-        "zone": "Entrada al Acervo Bibliográfico",
+        "zone": "Corredor Norte hacia Acervo Bibliográfico",
         "dist": "1.44 m",
         "desc": "Regresar al Inicio del Corredor",
         "yaw": 175.4,
-        "pitch": -37.1
+        "pitch": -37.3
       },
       {
         "targetIdx": 5,
-        "id": "scan_06",
         "name": "6. Pasillo de Libros B (Extintor y Revistero)",
-        "zone": "Estanterías de Ciencias y Revistas",
+        "zone": "Zona de Extintor y Acervo Especializado",
         "dist": "1.43 m",
         "desc": "Avanzar a Pasillo de Libros B",
         "yaw": -5.7,
-        "pitch": -37.6
+        "pitch": -37.5
       },
       {
         "targetIdx": 6,
-        "id": "scan_07",
         "name": "7. Pasillo Interior de Acervo Especializado",
-        "zone": "Galería de Biología y Botánica",
+        "zone": "Galería Profunda de Estanterías",
         "dist": "2.39 m",
         "desc": "Pasillo Interior Acervo Fondo",
         "yaw": 32.9,
         "pitch": -24.7
       }
     ],
-    "svgX": 7.02,
-    "svgY": 15.88,
+    "index": 4,
     "thumb": "Media/panorama_check_all/pano_5_thumb.jpg",
-    "index": 4
+    "svgX": 7.02,
+    "svgY": 15.88
   },
   {
     "id": "scan_06",
     "name": "6. Pasillo de Libros B (Extintor y Revistero)",
-    "zone": "Estanterías de Ciencias y Revistas",
-    "corridor": "Pasillo de Libros B (Junto a Revistero 'Cumbres')",
+    "zone": "Zona de Extintor y Acervo Especializado",
     "file4k": "Panoramas_4K/Scan_06_Pasillo_Estanterias_B.jpg",
-    "file8k": "Panoramas_360/Scan_06_Pasillo_Estanterias_B.jpg",
-    "desc": "Pasillo de estanterías junto al revistero institucional y puerta de seguridad.",
     "x": -12.409,
     "y": 2.477,
     "z": 1.373,
-    "mapPos": {
-      "x": 24.9,
-      "y": 66.8
-    },
-    "initialYaw": 0.0,
+    "rotY": 45.0,
     "neighbors": [
       {
         "targetIdx": 3,
-        "id": "scan_04",
         "name": "4. Inicio de Corredor hacia Estanterías",
-        "zone": "Entrada al Acervo Bibliográfico",
+        "zone": "Corredor Norte hacia Acervo Bibliográfico",
         "dist": "2.87 m",
         "desc": "Regresar al Inicio del Corredor",
         "yaw": 174.9,
-        "pitch": -20.7
+        "pitch": -20.9
       },
       {
         "targetIdx": 4,
-        "id": "scan_05",
         "name": "5. Pasillo Principal de Libros A",
-        "zone": "Estanterías de Consulta General",
+        "zone": "Estanterías Científicas y Generales",
         "dist": "1.43 m",
         "desc": "Regresar a Pasillo de Libros A",
         "yaw": 174.3,
-        "pitch": -37.4
+        "pitch": -37.5
       },
       {
         "targetIdx": 6,
-        "id": "scan_07",
         "name": "7. Pasillo Interior de Acervo Especializado",
-        "zone": "Galería de Biología y Botánica",
+        "zone": "Galería Profunda de Estanterías",
         "dist": "1.56 m",
         "desc": "Entrar a Acervo Interior Fondo",
         "yaw": 68.0,
         "pitch": -35.2
       }
     ],
-    "svgX": 5.59,
-    "svgY": 16.02,
+    "index": 5,
     "thumb": "Media/panorama_check_all/pano_6_thumb.jpg",
-    "index": 5
+    "svgX": 5.59,
+    "svgY": 16.02
   },
   {
     "id": "scan_07",
     "name": "7. Pasillo Interior de Acervo Especializado",
-    "zone": "Galería de Biología y Botánica",
-    "corridor": "Acervo Especializado Interior (Fondo)",
+    "zone": "Galería Profunda de Estanterías",
     "file4k": "Panoramas_4K/Scan_07_Pasillo_Interior_Libros.jpg",
-    "file8k": "Panoramas_360/Scan_07_Pasillo_Interior_Libros.jpg",
-    "desc": "Zona profunda de la biblioteca con colecciones de biología de plantas, botánica y ecología.",
     "x": -12.993,
     "y": 3.921,
     "z": 1.376,
-    "mapPos": {
-      "x": 22.3,
-      "y": 60.8
-    },
-    "initialYaw": 0.0,
+    "rotY": 28.0,
     "neighbors": [
       {
         "targetIdx": 4,
-        "id": "scan_05",
         "name": "5. Pasillo Principal de Libros A",
-        "zone": "Estanterías de Consulta General",
+        "zone": "Estanterías Científicas y Generales",
         "dist": "2.39 m",
         "desc": "Salir a Pasillo Principal Libros A",
         "yaw": -147.1,
@@ -820,48 +679,48 @@
       },
       {
         "targetIdx": 5,
-        "id": "scan_06",
         "name": "6. Pasillo de Libros B (Extintor y Revistero)",
-        "zone": "Estanterías de Ciencias y Revistas",
+        "zone": "Zona de Extintor y Acervo Especializado",
         "dist": "1.56 m",
         "desc": "Salir a Pasillo Libros B / Extintor",
         "yaw": -112.0,
-        "pitch": -35.3
+        "pitch": -35.2
       }
     ],
-    "svgX": 5.01,
-    "svgY": 14.58,
+    "index": 6,
     "thumb": "Media/panorama_check_all/pano_7_thumb.jpg",
-    "index": 6
+    "svgX": 5.01,
+    "svgY": 14.58
   }
 ];
 
     let currentIdx = 0;
-    let isUserInteracting = false;
-    let onPointerDownMouseX = 0, onPointerDownMouseY = 0;
-    let lon = 0, onPointerDownLon = 0;
-    let lat = 0, onPointerDownLat = 0;
-    let fov = 70;
-    let targetFov = 70;
-    let autoRotate = false;
-    let isTransitioning = false;
-    let transitionStartTime = 0;
-    const TRANSITION_DURATION = 750; // ms
-
-    // Three.js Core Globals
     let camera, scene, renderer;
     let activeSphere, nextSphere;
     const textureLoader = new THREE.TextureLoader();
     const textureCache = {};
+
+    let isUserInteracting = false;
+    let onPointerDownPointerX = 0, onPointerDownPointerY = 0;
+    let onPointerDownLon = 0, onPointerDownLat = 0;
+    let lon = 0, lat = 0;
+    let fov = 70, targetFov = 70;
+    let autoRotate = false;
+
+    // Hotspots Group
     const hotspotGroup = new THREE.Group();
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
     let hoveredHotspot = null;
 
-    // Movement animation vectors
+    // Transition State
+    let isTransitioning = false;
+    let transitionStartTime = 0;
+    const TRANSITION_DURATION = 900; // ms
     const moveDir = new THREE.Vector3();
     let targetIdxToLoad = null;
 
+    // ==================== INITIALIZATION ====================
     init();
     animate();
 
@@ -874,45 +733,34 @@
 
       // Scene
       scene = new THREE.Scene();
+      scene.add(hotspotGroup);
 
-      // Geometry: scale(1, 1, -1) solves mirroring
+      // Sphere Geometry: scale(1, 1, -1) to invert normals cleanly
       const sphereGeo = new THREE.SphereGeometry(500, 64, 40);
       sphereGeo.scale(1, 1, -1);
 
-      // Active Sphere
-      const activeMat = new THREE.MeshBasicMaterial({
-        transparent: true,
-        opacity: 1.0,
-        depthWrite: false
-      });
+      // Materials with LinearFilter for crisp 4K
+      const activeMat = new THREE.MeshBasicMaterial({ transparent: true, opacity: 1.0 });
       activeSphere = new THREE.Mesh(sphereGeo, activeMat);
       scene.add(activeSphere);
 
-      // Next Sphere (for crossfade transitions)
-      const nextMat = new THREE.MeshBasicMaterial({
-        transparent: true,
-        opacity: 0.0,
-        depthWrite: false
-      });
+      const nextMat = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.0 });
       nextSphere = new THREE.Mesh(sphereGeo, nextMat);
       scene.add(nextSphere);
-
-      // Add Hotspots Group
-      scene.add(hotspotGroup);
 
       // Renderer
       renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.outputEncoding = THREE.sRGBEncoding;
       container.appendChild(renderer.domElement);
 
-      // Build HUD Components
-      buildThumbnails();
-      buildSvgMinimap();
+      // Build UI
+      buildSVGMinimapNodes();
+      buildCarouselUI();
 
-      // Load First Station
+      // Load First Station with verified sphere rotation
       loadStationTexture(currentIdx, () => {
+        activeSphere.rotation.y = THREE.MathUtils.degToRad(STATIONS[currentIdx].rotY);
         updateHUDAndMap(currentIdx);
         createHotspotsForStation(currentIdx);
       });
@@ -963,29 +811,28 @@
       ctx.lineWidth = 10;
       ctx.stroke();
 
-      // Main Bright Ring
+      // Inner Pulse Ring
       ctx.beginPath();
-      ctx.arc(128, 128, 85, 0, Math.PI * 2);
+      ctx.arc(128, 128, 75, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0, 229, 255, 0.28)';
+      ctx.fill();
       ctx.strokeStyle = '#00e5ff';
       ctx.lineWidth = 14;
       ctx.stroke();
 
-      // Inner Solid Disc
+      // Forward Direction Chevron
       ctx.beginPath();
-      ctx.arc(128, 128, 55, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0, 229, 255, 0.88)';
-      ctx.fill();
-
-      // Forward Chevron Arrow
-      ctx.beginPath();
-      ctx.moveTo(128, 88);
-      ctx.lineTo(156, 136);
-      ctx.lineTo(142, 144);
-      ctx.lineTo(128, 118);
-      ctx.lineTo(114, 144);
-      ctx.lineTo(100, 136);
+      ctx.moveTo(128, 55);
+      ctx.lineTo(165, 110);
+      ctx.lineTo(142, 110);
+      ctx.lineTo(142, 155);
+      ctx.lineTo(114, 155);
+      ctx.lineTo(114, 110);
+      ctx.lineTo(91, 110);
       ctx.closePath();
       ctx.fillStyle = '#ffffff';
+      ctx.shadowColor = '#00e5ff';
+      ctx.shadowBlur = 12;
       ctx.fill();
 
       return new THREE.CanvasTexture(canvas);
@@ -1006,6 +853,7 @@
         const yawDeg = n.yaw;
         const radYaw = THREE.MathUtils.degToRad(yawDeg);
 
+        // Position on 3D ground plane relative to unified West axis
         const R = 130;
         const hx = R * Math.sin(radYaw);
         const hy = -45;
@@ -1037,7 +885,7 @@
       });
     }
 
-    // ==================== SEAMLESS IN-PLACE GAZE CONTINUITY TRANSITION ====================
+    // ==================== UNIFIED GAZE CONTINUITY TRANSITION ====================
     function triggerTransition(targetIdx) {
       if (isTransitioning || targetIdx === currentIdx) return;
       isTransitioning = true;
@@ -1047,20 +895,20 @@
       const nextImg = nextSt.file4k;
       const currSt = STATIONS[currentIdx];
 
+      // Physical displacement vector:
+      // West is -dx (camera forward along -Z at lon=0)
+      // North is +dy (camera right along +X at lon=0)
       const dx = nextSt.x - currSt.x;
       const dy = nextSt.y - currSt.y;
-      const tourX = dy;
-      const tourZ = dx;
-
-      const travelYaw = Math.atan2(tourX, -tourZ) * (180 / Math.PI);
-      const radYaw = THREE.MathUtils.degToRad(travelYaw);
-      moveDir.set(Math.sin(radYaw), 0, -Math.cos(radYaw)).normalize();
+      const travelYaw = Math.atan2(dy, -dx);
+      moveDir.set(Math.sin(travelYaw), 0, -Math.cos(travelYaw)).normalize();
 
       const applyAndStart = (tex) => {
         nextSphere.material.map = tex;
+        nextSphere.rotation.y = THREE.MathUtils.degToRad(nextSt.rotY);
         nextSphere.material.needsUpdate = true;
         nextSphere.material.opacity = 0.0;
-        
+
         nextSphere.position.set(-moveDir.x * 120, 0, -moveDir.z * 120);
 
         activeSphere.material.opacity = 1.0;
@@ -1082,194 +930,156 @@
       }
     }
 
-    // ==================== HUD, MINIMAP & RADAR UPDATES ====================
+    // ==================== HUD & MINIMAP UPDATE ====================
     function updateHUDAndMap(idx) {
       currentIdx = idx;
       const st = STATIONS[idx];
 
-      // Update Header Text
       document.getElementById('location-name').innerText = st.name;
-      document.getElementById('location-desc').innerText = st.desc;
+      document.getElementById('location-desc').innerText = st.zone;
 
-      // Update Thumbnails Active Card
-      document.querySelectorAll('.thumb-card').forEach((card, i) => {
-        card.classList.toggle('active', i === idx);
+      // Update Carousel Active Item
+      document.querySelectorAll('.carousel-item').forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+        if (i === idx) el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
       });
 
-      // Update SVG Nodes Active state
-      document.querySelectorAll('.svg-node').forEach((node) => {
-        const nodeIdx = parseInt(node.getAttribute('data-idx'));
-        node.classList.toggle('active', nodeIdx === idx);
+      // Update SVG Minimap active node
+      document.querySelectorAll('#svg-stations circle').forEach((dot, i) => {
+        if (i === idx) {
+          dot.setAttribute('fill', '#ef4444');
+          dot.setAttribute('r', '0.65');
+          dot.setAttribute('stroke', '#ffffff');
+          dot.setAttribute('stroke-width', '0.22');
+        } else {
+          dot.setAttribute('fill', '#00e5ff');
+          dot.setAttribute('r', '0.45');
+          dot.setAttribute('stroke', 'none');
+        }
       });
 
-      // Update Radar Cone Position and Rotation
-      // Base SVG cone points UP (-y). (lon - 90) rotates UP to LEFT (West) at lon=0!
-      const radarAngle = (lon - 90) % 360;
-      const coneMain = document.getElementById('svg-radar-cone');
-      if (coneMain) {
-        coneMain.setAttribute('transform', `translate(${st.svgX}, ${st.svgY}) rotate(${radarAngle})`);
-      }
+      // Update Expanded Map active node
+      document.querySelectorAll('#svg-stations-exp circle').forEach((dot, i) => {
+        if (i === idx) {
+          dot.setAttribute('fill', '#ef4444');
+          dot.setAttribute('r', '0.65');
+          dot.setAttribute('stroke', '#ffffff');
+          dot.setAttribute('stroke-width', '0.22');
+        } else {
+          dot.setAttribute('fill', '#00e5ff');
+          dot.setAttribute('r', '0.45');
+          dot.setAttribute('stroke', 'none');
+        }
+      });
 
-      // Build Next Steps Navigation Pills
-      buildNextStepPills(st);
-
-      // Sync expanded map if open
-      syncExpandedMap();
-    }
-
-    function buildNextStepPills(st) {
-      const container = document.getElementById('guide-pills-container');
-      container.innerHTML = '';
-      (st.neighbors || []).forEach((n) => {
-        const targetSt = STATIONS[n.targetIdx];
+      // Update Assisted Navigation Pills
+      const assistNav = document.getElementById('assist-nav');
+      assistNav.innerHTML = '';
+      (st.neighbors || []).forEach(n => {
         const pill = document.createElement('div');
-        pill.className = 'guide-pill';
-        const distLabel = typeof n.dist === 'number' ? (n.dist.toFixed(1) + 'm') : String(n.dist);
-        pill.innerHTML = `<span class="pill-arrow">➔</span> ${n.desc} <strong>(${distLabel})</strong>`;
+        pill.className = 'assist-pill';
+        pill.innerHTML = `<span>➡️</span><span>${n.name.split('.')[1] || n.name}</span><span style="color:#10b981;font-size:11px;">${n.dist}</span>`;
         pill.onclick = () => triggerTransition(n.targetIdx);
-        container.appendChild(pill);
+        assistNav.appendChild(pill);
       });
     }
 
-    function buildThumbnails() {
-      const drawer = document.getElementById('thumbnails-drawer');
-      drawer.innerHTML = '';
-      STATIONS.forEach((st, i) => {
-        const card = document.createElement('div');
-        card.className = `thumb-card ${i === currentIdx ? 'active' : ''}`;
-        card.innerHTML = `
-          <img src="${st.thumb}" alt="${st.name}">
-          <div class="thumb-label">${st.name.split('.')[1] || st.name}</div>
-        `;
-        card.onclick = () => triggerTransition(i);
-        drawer.appendChild(card);
-      });
-    }
+    // ==================== BUILD SVG MINIMAP NODES ====================
+    function buildSVGMinimapNodes() {
+      const gMain = document.getElementById('svg-stations');
+      const gExp = document.getElementById('svg-stations-exp');
+      gMain.innerHTML = '';
+      gExp.innerHTML = '';
 
-    function buildSvgMinimap() {
-      const nodesGroup = document.getElementById('svg-nodes-group');
-      const linksGroup = document.getElementById('svg-links-group');
-      nodesGroup.innerHTML = '';
-      linksGroup.innerHTML = '';
+      STATIONS.forEach((st, idx) => {
+        const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('cx', st.svgX);
+        dot.setAttribute('cy', st.svgY);
+        dot.setAttribute('r', '0.45');
+        dot.setAttribute('fill', idx === 0 ? '#ef4444' : '#00e5ff');
+        dot.setAttribute('class', 'map-station-dot');
+        dot.onclick = () => triggerTransition(idx);
 
-      // Draw dashed paths between stations
-      const drawnLinks = new Set();
-      STATIONS.forEach((st) => {
-        (st.neighbors || []).forEach((n) => {
-          const targetSt = STATIONS[n.targetIdx];
-          const linkId = [Math.min(st.index, targetSt.index), Math.max(st.index, targetSt.index)].join('-');
-          if (!drawnLinks.has(linkId)) {
-            drawnLinks.add(linkId);
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', st.svgX);
-            line.setAttribute('y1', st.svgY);
-            line.setAttribute('x2', targetSt.svgX);
-            line.setAttribute('y2', targetSt.svgY);
-            line.setAttribute('class', 'svg-path');
-            linksGroup.appendChild(line);
-          }
-        });
-      });
+        const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+        title.textContent = st.name;
+        dot.appendChild(title);
+        gMain.appendChild(dot);
 
-      // Draw Station Nodes
-      STATIONS.forEach((st, i) => {
-        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-        g.setAttribute('class', `svg-node ${i === currentIdx ? 'active' : ''}`);
-        g.setAttribute('data-idx', i);
-        g.setAttribute('transform', `translate(${st.svgX}, ${st.svgY})`);
-        g.onclick = (e) => {
-          e.stopPropagation();
-          triggerTransition(i);
+        // Expanded clone
+        const dotExp = dot.cloneNode(true);
+        dotExp.onclick = () => {
+          triggerTransition(idx);
+          closeExpandedMap();
         };
-
-        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('r', '0.75');
-        circle.setAttribute('class', 'node-bg');
-
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('y', '0.05');
-        text.textContent = (i + 1);
-
-        g.appendChild(circle);
-        g.appendChild(text);
-        nodesGroup.appendChild(g);
+        gExp.appendChild(dotExp);
       });
     }
 
-    // ==================== EXPANDED MAP LOGIC ====================
-    function openExpandedMap() {
-      const modal = document.getElementById('map-modal');
-      modal.classList.add('open');
-      syncExpandedMap();
-    }
+    // ==================== BUILD CAROUSEL UI ====================
+    function buildCarouselUI() {
+      const tray = document.getElementById('carousel-tray');
+      tray.innerHTML = '';
 
-    function closeExpandedMap(e) {
-      if (!e || e.target.classList.contains('map-modal-overlay') || e.target.classList.contains('close-btn')) {
-        document.getElementById('map-modal').classList.remove('open');
-      }
-    }
-
-    function syncExpandedMap() {
-      const expSvg = document.getElementById('minimap-svg-expanded');
-      const mainSvg = document.getElementById('minimap-svg-main');
-      if (expSvg && mainSvg) {
-        expSvg.innerHTML = mainSvg.innerHTML;
-        expSvg.querySelectorAll('.svg-node').forEach((node) => {
-          const idx = parseInt(node.getAttribute('data-idx'));
-          node.onclick = () => {
-            triggerTransition(idx);
-            document.getElementById('map-modal').classList.remove('open');
-          };
-        });
-      }
+      STATIONS.forEach((st, idx) => {
+        const item = document.createElement('div');
+        item.className = `carousel-item ${idx === 0 ? 'active' : ''}`;
+        item.innerHTML = `
+          <img src="${st.thumb}" alt="${st.name}">
+          <div class="item-label">${st.name}</div>
+        `;
+        item.onclick = () => triggerTransition(idx);
+        tray.appendChild(item);
+      });
     }
 
     // ==================== POINTER & INTERACTION CONTROLS ====================
     function onPointerDown(e) {
-      if (e.target.closest('.bottom-dock, .top-brand, .minimap-panel, .thumbnails-drawer, .modal-overlay, .map-modal-overlay, .direction-guide')) return;
+      if (e.target.closest('.bottom-dock') || e.target.closest('.carousel-tray') ||
+          e.target.closest('.minimap-panel') || e.target.closest('.top-brand') ||
+          e.target.closest('.assist-nav')) return;
+
       isUserInteracting = true;
-      onPointerDownMouseX = e.clientX;
-      onPointerDownMouseY = e.clientY;
+      onPointerDownPointerX = e.clientX;
+      onPointerDownPointerY = e.clientY;
       onPointerDownLon = lon;
       onPointerDownLat = lat;
     }
 
     function onPointerMove(e) {
+      if (isUserInteracting) {
+        lon = (onPointerDownPointerX - e.clientX) * 0.15 + onPointerDownLon;
+        lat = (e.clientY - onPointerDownPointerY) * 0.15 + onPointerDownLat;
+      }
+
+      // Raycast Hotspot Hover
       mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-
       raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(hotspotGroup.children);
 
+      const intersects = raycaster.intersectObjects(hotspotGroup.children);
       const tooltip = document.getElementById('hotspot-tooltip');
 
-      if (intersects.length > 0 && !isTransitioning) {
+      if (intersects.length > 0) {
         const hit = intersects[0].object;
-        document.body.style.cursor = 'pointer';
-        hit.scale.set(1.25, 1.25, 1.25);
-        hoveredHotspot = hit;
-
-        const screenPos = hit.position.clone().project(camera);
-        const sx = ((screenPos.x + 1) * window.innerWidth) / 2;
-        const sy = ((-screenPos.y + 1) * window.innerHeight) / 2;
-
-        tooltip.style.left = `${sx}px`;
-        tooltip.style.top = `${sy}px`;
-        const distLabel = typeof hit.userData.dist === 'number' ? (hit.userData.dist.toFixed(1) + 'm') : String(hit.userData.dist);
-        document.getElementById('tooltip-text').innerText = `${hit.userData.desc} (${distLabel})`;
+        if (hoveredHotspot !== hit) {
+          hoveredHotspot = hit;
+          document.body.style.cursor = 'pointer';
+        }
+        tooltip.style.left = `${e.clientX}px`;
+        tooltip.style.top = `${e.clientY - 12}px`;
+        tooltip.querySelector('.tt-title').innerText = hit.userData.targetName;
+        tooltip.querySelector('.tt-desc').innerText = hit.userData.desc;
+        const d = hit.userData.dist;
+        tooltip.querySelector('.tt-dist').innerText = typeof d === 'number' ? d.toFixed(1) + ' m' : String(d);
         tooltip.classList.add('visible');
+        hit.scale.set(1.25, 1.25, 1.25);
       } else {
-        document.body.style.cursor = 'grab';
         if (hoveredHotspot) {
           hoveredHotspot.scale.set(1, 1, 1);
           hoveredHotspot = null;
+          document.body.style.cursor = 'default';
         }
         tooltip.classList.remove('visible');
-      }
-
-      if (isUserInteracting) {
-        lon = (onPointerDownMouseX - e.clientX) * 0.15 + onPointerDownLon;
-        lat = (e.clientY - onPointerDownMouseY) * 0.15 + onPointerDownLat;
       }
     }
 
@@ -1285,24 +1095,7 @@
 
     function onDocumentMouseWheel(e) {
       e.preventDefault();
-      targetFov += e.deltaY * 0.05;
-      targetFov = Math.max(35, Math.min(90, targetFov));
-    }
-
-    function onKeyDown(e) {
-      if (e.key === 'ArrowRight' || e.key === 'd') lon += 4;
-      if (e.key === 'ArrowLeft' || e.key === 'a') lon -= 4;
-      if (e.key === 'ArrowUp' || e.key === 'w') lat += 4;
-      if (e.key === 'ArrowDown' || e.key === 's') lat -= 4;
-      if (e.key === '+' || e.key === '=') zoomIn();
-      if (e.key === '-') zoomOut();
-      if (e.key === 'm') toggleMinimap();
-      if (e.key === 't') toggleThumbnails();
-      if (e.key === ' ') toggleAutoRotate();
-      if (e.key === 'Escape') {
-        document.getElementById('map-modal').classList.remove('open');
-        document.getElementById('info-modal').classList.remove('open');
-      }
+      targetFov = Math.max(35, Math.min(90, targetFov + e.deltaY * 0.04));
     }
 
     function onWindowResize() {
@@ -1311,19 +1104,40 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
-    // ==================== BUTTON ACTIONS ====================
-    function toggleMinimap() {
-      const p = document.getElementById('minimap-panel');
-      const btn = document.getElementById('btn-map');
-      p.classList.toggle('hidden');
-      btn.classList.toggle('active', !p.classList.contains('hidden'));
+    function onKeyDown(e) {
+      if (e.key === 'ArrowLeft') lon -= 4;
+      else if (e.key === 'ArrowRight') lon += 4;
+      else if (e.key === 'ArrowUp') lat += 3;
+      else if (e.key === 'ArrowDown') lat -= 3;
+      else if (e.key === '+' || e.key === '=') zoomIn();
+      else if (e.key === '-' || e.key === '_') zoomOut();
+      else if (e.key === 'r' || e.key === 'R') toggleAutoRotate();
+      else if (e.key === 'Escape') {
+        closeExpandedMap();
+        closeInfoModal();
+      }
     }
 
-    function toggleThumbnails() {
-      const d = document.getElementById('thumbnails-drawer');
-      const btn = document.getElementById('btn-thumbs');
-      d.classList.toggle('open');
-      btn.classList.toggle('active', d.classList.contains('open'));
+    // ==================== UI BUTTON ACTIONS ====================
+    function toggleCarousel() {
+      const tray = document.getElementById('carousel-tray');
+      tray.classList.toggle('hidden');
+      document.getElementById('btn-thumbs').classList.toggle('active', !tray.classList.contains('hidden'));
+    }
+
+    function toggleMinimap() {
+      const panel = document.getElementById('minimap-panel');
+      panel.classList.toggle('hidden');
+      document.getElementById('btn-map').classList.toggle('active', !panel.classList.contains('hidden'));
+    }
+
+    function openExpandedMap() {
+      document.getElementById('map-modal').classList.add('open');
+    }
+    function closeExpandedMap(e) {
+      if (!e || e.target.classList.contains('modal-overlay') || e.target.classList.contains('close-btn')) {
+        document.getElementById('map-modal').classList.remove('open');
+      }
     }
 
     function toggleAutoRotate() {
@@ -1383,7 +1197,7 @@
 
       camera.lookAt(camera.target);
 
-      // Compass Heading text update
+      // Compass Heading text update (lon=0 is West, lon=90 is North, lon=180 is East, lon=270 is South)
       let normLon = ((lon % 360) + 360) % 360;
       let card = "OESTE";
       if (normLon >= 22.5 && normLon < 67.5) card = "NOROESTE";
@@ -1396,8 +1210,8 @@
       document.getElementById('heading-display').innerText = `${card} ${Math.round(normLon)}°`;
 
       // Update Radar Cone rotation on SVG Minimap
-      // Physical alignment: Base SVG cone points UP (-y).
-      // Rotating by (lon - 90) rotates UP to LEFT (West/along the main corridor) at lon=0!
+      // Physical alignment: Base SVG cone points UP (-y, North).
+      // When lon=0 (looking West), rotating by (lon - 90) rotates UP to LEFT (-x, West)!
       const st = STATIONS[currentIdx];
       const radarAngle = (lon - 90) % 360;
 
@@ -1406,7 +1220,7 @@
         coneMain.setAttribute('transform', `translate(${st.svgX}, ${st.svgY}) rotate(${radarAngle})`);
       }
 
-      const expSvgCone = document.querySelector('#minimap-svg-expanded #svg-radar-cone');
+      const expSvgCone = document.getElementById('svg-radar-cone-exp');
       if (expSvgCone && st) {
         expSvgCone.setAttribute('transform', `translate(${st.svgX}, ${st.svgY}) rotate(${radarAngle})`);
       }
@@ -1430,6 +1244,7 @@
           isTransitioning = false;
 
           activeSphere.material.map = nextSphere.material.map;
+          activeSphere.rotation.y = nextSphere.rotation.y;
           activeSphere.material.opacity = 1.0;
           activeSphere.position.set(0, 0, 0);
 
