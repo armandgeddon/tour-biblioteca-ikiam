@@ -1,0 +1,280 @@
+[
+  {
+    "id": "scan_01",
+    "name": "1. Entrada y Mostrador de Recepci\u00f3n",
+    "file4k": "Panoramas_4K/Scan_01_Entrada_Recepcion.jpg",
+    "file8k": "Panoramas_360/Scan_01_Entrada_Recepcion.jpg",
+    "desc": "Vista 360\u00b0 real del punto de acceso principal y mostrador de atenci\u00f3n.",
+    "x": -0.003,
+    "y": -0.018,
+    "z": 1.382,
+    "neighbors": [
+      "scan_02",
+      "scan_03"
+    ],
+    "mapPos": {
+      "x": 77.9,
+      "y": 75.8
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_02",
+        "name": "Recepci\u00f3n y Casilleros de Estudiantes",
+        "dist": 4.37,
+        "yaw": -90.1,
+        "pitch": -15.3
+      },
+      {
+        "id": "scan_03",
+        "name": "Sala Central de Lectura y Estudio",
+        "dist": 8.88,
+        "yaw": -90.3,
+        "pitch": -7.7
+      }
+    ]
+  },
+  {
+    "id": "scan_02",
+    "name": "2. Recepci\u00f3n y Casilleros de Estudiantes",
+    "file4k": "Panoramas_4K/Scan_02_Recepcion_Casilleros.jpg",
+    "file8k": "Panoramas_360/Scan_02_Recepcion_Casilleros.jpg",
+    "desc": "Vista 360\u00b0 real del mostrador lateral y zona de casilleros.",
+    "x": -4.375,
+    "y": -0.024,
+    "z": 1.383,
+    "neighbors": [
+      "scan_01",
+      "scan_03"
+    ],
+    "mapPos": {
+      "x": 59.0,
+      "y": 75.8
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_01",
+        "name": "Entrada y Mostrador de Recepci\u00f3n",
+        "dist": 4.37,
+        "yaw": 89.9,
+        "pitch": -15.4
+      },
+      {
+        "id": "scan_03",
+        "name": "Sala Central de Lectura y Estudio",
+        "dist": 4.51,
+        "yaw": -90.4,
+        "pitch": -14.9
+      }
+    ]
+  },
+  {
+    "id": "scan_03",
+    "name": "3. Sala Central de Lectura y Estudio",
+    "file4k": "Panoramas_4K/Scan_03_Mesas_Estudio_Central.jpg",
+    "file8k": "Panoramas_360/Scan_03_Mesas_Estudio_Central.jpg",
+    "desc": "Vista 360\u00b0 real de las mesas de trabajo compartidas e iluminaci\u00f3n natural.",
+    "x": -8.883,
+    "y": -0.059,
+    "z": 1.38,
+    "neighbors": [
+      "scan_01",
+      "scan_02",
+      "scan_04",
+      "scan_05"
+    ],
+    "mapPos": {
+      "x": 39.4,
+      "y": 76.0
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_01",
+        "name": "Entrada y Mostrador de Recepci\u00f3n",
+        "dist": 8.88,
+        "yaw": 89.7,
+        "pitch": -7.7
+      },
+      {
+        "id": "scan_02",
+        "name": "Recepci\u00f3n y Casilleros de Estudiantes",
+        "dist": 4.51,
+        "yaw": 89.6,
+        "pitch": -14.9
+      },
+      {
+        "id": "scan_04",
+        "name": "Corredor hacia Estanter\u00edas",
+        "dist": 2.87,
+        "yaw": -13.3,
+        "pitch": -22.5
+      },
+      {
+        "id": "scan_05",
+        "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+        "dist": 3.4,
+        "yaw": -38.1,
+        "pitch": -19.5
+      }
+    ]
+  },
+  {
+    "id": "scan_04",
+    "name": "4. Corredor hacia Estanter\u00edas",
+    "file4k": "Panoramas_4K/Scan_04_Corredor_Estanterias.jpg",
+    "file8k": "Panoramas_360/Scan_04_Corredor_Estanterias.jpg",
+    "desc": "Vista 360\u00b0 real del pasillo de transici\u00f3n entre mesas y estanter\u00edas.",
+    "x": -9.546,
+    "y": 2.735,
+    "z": 1.388,
+    "neighbors": [
+      "scan_03",
+      "scan_05",
+      "scan_06"
+    ],
+    "mapPos": {
+      "x": 36.5,
+      "y": 64.8
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_03",
+        "name": "Sala Central de Lectura y Estudio",
+        "dist": 2.87,
+        "yaw": 166.7,
+        "pitch": -22.8
+      },
+      {
+        "id": "scan_05",
+        "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+        "dist": 1.44,
+        "yaw": -94.6,
+        "pitch": -40.0
+      },
+      {
+        "id": "scan_06",
+        "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+        "dist": 2.87,
+        "yaw": -95.1,
+        "pitch": -22.9
+      }
+    ]
+  },
+  {
+    "id": "scan_05",
+    "name": "5. Pasillo Principal de Estanter\u00edas (Libros)",
+    "file4k": "Panoramas_4K/Scan_05_Pasillo_Estanterias_A.jpg",
+    "file8k": "Panoramas_360/Scan_05_Pasillo_Estanterias_A.jpg",
+    "desc": "Vista 360\u00b0 real del acervo bibliogr\u00e1fico con libros y estanter\u00edas.",
+    "x": -10.983,
+    "y": 2.62,
+    "z": 1.377,
+    "neighbors": [
+      "scan_04",
+      "scan_06",
+      "scan_07"
+    ],
+    "mapPos": {
+      "x": 30.3,
+      "y": 65.3
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_04",
+        "name": "Corredor hacia Estanter\u00edas",
+        "dist": 1.44,
+        "yaw": 85.4,
+        "pitch": -39.5
+      },
+      {
+        "id": "scan_06",
+        "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+        "dist": 1.43,
+        "yaw": -95.7,
+        "pitch": -40.0
+      },
+      {
+        "id": "scan_07",
+        "name": "Pasillo Interior de Acervo Especializado",
+        "dist": 2.39,
+        "yaw": -57.1,
+        "pitch": -26.6
+      }
+    ]
+  },
+  {
+    "id": "scan_06",
+    "name": "6. Pasillo de Estanter\u00edas y Extintor Rojo",
+    "file4k": "Panoramas_4K/Scan_06_Pasillo_Estanterias_B.jpg",
+    "file8k": "Panoramas_360/Scan_06_Pasillo_Estanterias_B.jpg",
+    "desc": "Vista 360\u00b0 real junto al revistero y se\u00f1al\u00e9tica de seguridad.",
+    "x": -12.409,
+    "y": 2.477,
+    "z": 1.373,
+    "neighbors": [
+      "scan_04",
+      "scan_05",
+      "scan_07"
+    ],
+    "mapPos": {
+      "x": 24.1,
+      "y": 65.8
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_04",
+        "name": "Corredor hacia Estanter\u00edas",
+        "dist": 2.87,
+        "yaw": 84.9,
+        "pitch": -22.4
+      },
+      {
+        "id": "scan_05",
+        "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+        "dist": 1.43,
+        "yaw": 84.3,
+        "pitch": -39.8
+      },
+      {
+        "id": "scan_07",
+        "name": "Pasillo Interior de Acervo Especializado",
+        "dist": 1.56,
+        "yaw": -22.0,
+        "pitch": -37.5
+      }
+    ]
+  },
+  {
+    "id": "scan_07",
+    "name": "7. Pasillo Interior de Acervo Especializado",
+    "file4k": "Panoramas_4K/Scan_07_Pasillo_Interior_Libros.jpg",
+    "file8k": "Panoramas_360/Scan_07_Pasillo_Interior_Libros.jpg",
+    "desc": "Vista 360\u00b0 real de la galer\u00eda profunda de estanter\u00edas cient\u00edficas.",
+    "x": -12.993,
+    "y": 3.921,
+    "z": 1.376,
+    "neighbors": [
+      "scan_05",
+      "scan_06"
+    ],
+    "mapPos": {
+      "x": 21.6,
+      "y": 60.1
+    },
+    "computedNeighbors": [
+      {
+        "id": "scan_05",
+        "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+        "dist": 2.39,
+        "yaw": 122.9,
+        "pitch": -26.6
+      },
+      {
+        "id": "scan_06",
+        "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+        "dist": 1.56,
+        "yaw": 158.0,
+        "pitch": -37.7
+      }
+    ]
+  }
+]

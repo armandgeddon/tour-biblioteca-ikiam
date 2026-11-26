@@ -1,0 +1,184 @@
+c652767251aa1cdaf-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -12.992952346801758,
+              "y" : 3.921220541000366,
+              "z" : 1.3755847215652466
+            },
+            "rotation" : {
+              "x" : -0.6634456114351509,
+              "y" : -0.3063149062852883,
+              "z" : 0.2861542143900057,
+              "w" : 0.6197796902312901
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ {
+              "id" : "tsmq1wak12rhgn0mawksxcwcd",
+              "meshId" : 0,
+              "sequence" : 0
+            } ],
+            "anchor" : {
+              "id" : "8a060r305m4kwy5efh3c789hb",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "8a060r305m4kwy5efh3c789hb",
+                "sweepUuid" : "4e95bb65d6e5481e93ffdd164e526e92",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "YXJtofk19pT",
+          "label" : "11.25.2026_13.33.54",
+          "classification" : null,
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4096,
+          "width" : 8192,
+          "created" : "2026-11-25T18:34:35Z",
+          "modified" : "2026-11-25T18:34:35Z",
+          "status" : "available",
+          "filename" : "11252026_133354.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/YXJtofk19pT/11.25.2026_13.33.54.jpg?t=2-38fcb0589d4c040babad017ccdad0c051643813e-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/YXJtofk19pT/11.25.2026_13.33.54.jpg?t=2-38fcb0589d4c040babad017ccdad0c051643813e-1795633476-1&download=11252026_133354.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "equirectangular",
+          "origin" : "user",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/YXJtofk19pT/11.25.2026_13.33.54.jpg?t=2-38fcb0589d4c040babad017ccdad0c051643813e-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/YXJtofk19pT/11.25.2026_13.33.54.jpg?t=2-38fcb0589d4c040babad017ccdad0c051643813e-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -9.546090126037598,
+              "y" : 2.7352728843688965,
+              "z" : 1.3875709772109985
+            },
+            "rotation" : {
+              "x" : -0.6634456114351509,
+              "y" : -0.3063149062852883,
+              "z" : 0.2861542143900057,
+              "w" : 0.6197796902312901
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ {
+              "id" : "tsmq1wak12rhgn0mawksxcwcd",
+              "meshId" : 0,
+              "sequence" : 0
+            } ],
+            "anchor" : {
+              "id" : "iwap2489rawdf0y8cy3u3dbxa",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "iwap2489rawdf0y8cy3u3dbxa",
+                "sweepUuid" : "1c80effb586042488984798e682f52c5",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "p26heMYkZAJ",
+          "label" : "Kitchen",
+          "classification" : "Kitchen",
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4320,
+          "width" : 7680,
+          "created" : "2026-11-25T15:30:52Z",
+          "modified" : "2026-11-25T15:30:53Z",
+          "status" : "available",
+          "filename" : "Kitchen.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/p26heMYkZAJ/p26heMYkZAJ-Kitchen.jpg?t=2-2db7f8c059ba3053c8f3f9156f7e3a209495e732-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/p26heMYkZAJ/p26heMYkZAJ-Kitchen.jpg?t=2-2db7f8c059ba3053c8f3f9156f7e3a209495e732-1795633476-1&download=Kitchen.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "photo2D",
+          "origin" : "vision",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/p26heMYkZAJ/p26heMYkZAJ-Kitchen.jpg?t=2-2db7f8c059ba3053c8f3f9156f7e3a209495e732-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/p26heMYkZAJ/p26heMYkZAJ-Kitchen.jpg?t=2-2db7f8c059ba3053c8f3f9156f7e3a209495e732-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -0.0026596859097480774,
+              "y" : -0.018474992364645004,
+              "z" : 1.3818299770355225
+            },
+            "rotation" : {
+              "x" : 0.7302461988904548,
+              "y" : 0.11371478111464794,
+              "z" : -0.10365294027957203,
+              "w" : -0.6656316524648637
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ ],
+            "anchor" : {
+              "id" : "08du3ks8ds258scq0tdmwhpfc",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "08du3ks8ds258scq0tdmwhpfc",
+                "sweepUuid" : "de1e3f3d39884fd6a2b0f250e16689fe",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "zAZXaikD7KD",
+          "label" : "11.25.2026_13.36.51",
+          "classification" : null,
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4096,
+          "width" : 8192,
+          "created" : "2026-11-25T18:36:59Z",
+          "modified" : "2026-11-25T18:36:59Z",
+          "status" : "available",
+          "filename" : "11252026_133651.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/zAZXaikD7KD/11.25.2026_13.36.51.jpg?t=2-c1f49fe8e4c47a0aed2c89f6f7f31e6ad3c3de4c-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/zAZXaikD7KD/11.25.2026_13.36.51.jpg?t=2-c1f49fe8e4c47a0aed2c89f6f7f31e6ad3c3de4c-1795633476-1&download=11252026_133651.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "equirectangular",
+          "origin" : "user",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/zAZXaikD7KD/11.25.2026_13.36.51.jpg?t=2-c1f49fe8e4c47a0aed2c89f6f7f31e6ad3c3de4c-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/zAZXaikD7KD/11.25.2026_13.36.51.jpg?t=2-c1f49fe8e4c47a0aed2c89f6f7f31e6ad3c3de4c-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -12.40919017791748,
+              "y" : 2.476597547531128,
+              "z" : 1.3727809190750122
+            },
+            "rotation" : {
+              "x" : -0.6634456114351509,
+              "y" : -0.3063149062852883,
+              "z" : 0.2861542143900057,
+              "w" : 0.6197796902312901
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            

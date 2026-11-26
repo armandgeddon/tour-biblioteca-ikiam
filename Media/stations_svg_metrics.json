@@ -1,0 +1,358 @@
+{
+  "walls": [
+    "<line x1=\"5.07\" y1=\"22.88\" x2=\"7.62\" y2=\"22.88\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"16.58\" y1=\"15.18\" x2=\"16.26\" y2=\"15.18\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.57\" y1=\"15.19\" x2=\"9.57\" y2=\"14.91\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"19.77\" x2=\"19.12\" y2=\"22.87\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"7.65\" y1=\"1.03\" x2=\"8.94\" y2=\"1.03\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"5.07\" y1=\"16.28\" x2=\"5.07\" y2=\"22.88\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"7.66\" y1=\"9.21\" x2=\"7.65\" y2=\"1.03\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"1.41\" y1=\"9.21\" x2=\"7.66\" y2=\"9.21\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.67\" y1=\"10.78\" x2=\"9.67\" y2=\"9.20\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.24\" y1=\"15.19\" x2=\"10.17\" y2=\"13.03\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.25\" y1=\"23.08\" x2=\"7.62\" y2=\"23.08\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"1.41\" y1=\"9.21\" x2=\"1.41\" y2=\"16.28\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.25\" y1=\"23.08\" x2=\"9.25\" y2=\"22.28\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"8.94\" y1=\"1.03\" x2=\"8.94\" y2=\"9.20\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"8.94\" y1=\"9.20\" x2=\"9.67\" y2=\"9.20\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"10.74\" y1=\"22.28\" x2=\"9.25\" y2=\"22.28\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.57\" y1=\"15.19\" x2=\"9.24\" y2=\"15.19\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"14.90\" x2=\"16.58\" y2=\"14.90\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"17.38\" x2=\"21.71\" y2=\"17.38\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"5.07\" y1=\"16.28\" x2=\"1.41\" y2=\"16.28\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"21.71\" y1=\"19.76\" x2=\"21.71\" y2=\"17.38\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"22.87\" x2=\"10.74\" y2=\"22.87\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"9.57\" y1=\"14.91\" x2=\"16.26\" y2=\"14.90\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"19.77\" x2=\"21.71\" y2=\"19.76\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"10.74\" y1=\"22.28\" x2=\"10.74\" y2=\"22.87\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"10.17\" y1=\"10.78\" x2=\"9.67\" y2=\"10.78\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"7.62\" y1=\"23.08\" x2=\"7.62\" y2=\"22.88\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"19.12\" y1=\"14.90\" x2=\"19.12\" y2=\"17.38\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"10.17\" y1=\"10.78\" x2=\"10.17\" y2=\"13.03\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"16.26\" y1=\"14.90\" x2=\"16.26\" y2=\"15.18\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />",
+    "<line x1=\"16.58\" y1=\"14.90\" x2=\"16.58\" y2=\"15.18\" stroke=\"#38bdf8\" stroke-width=\"0.35\" stroke-linecap=\"round\" />"
+  ],
+  "stations": [
+    {
+      "id": "scan_01",
+      "name": "1. Entrada y Mostrador de Recepci\u00f3n",
+      "file4k": "Panoramas_4K/Scan_01_Entrada_Recepcion.jpg",
+      "file8k": "Panoramas_360/Scan_01_Entrada_Recepcion.jpg",
+      "desc": "Vista 360\u00b0 real del punto de acceso principal y mostrador de atenci\u00f3n.",
+      "x": -0.003,
+      "y": -0.018,
+      "z": 1.382,
+      "neighbors": [
+        "scan_02",
+        "scan_03"
+      ],
+      "mapPos": {
+        "x": 77.9,
+        "y": 75.8
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_02",
+          "name": "Recepci\u00f3n y Casilleros de Estudiantes",
+          "dist": 4.37,
+          "yaw": -90.1,
+          "pitch": -15.3
+        },
+        {
+          "id": "scan_03",
+          "name": "Sala Central de Lectura y Estudio",
+          "dist": 8.88,
+          "yaw": -90.3,
+          "pitch": -7.7
+        }
+      ],
+      "svg_pos": {
+        "x": 17.997,
+        "y": 18.518,
+        "pct_x": 79.99,
+        "pct_y": 77.16
+      }
+    },
+    {
+      "id": "scan_02",
+      "name": "2. Recepci\u00f3n y Casilleros de Estudiantes",
+      "file4k": "Panoramas_4K/Scan_02_Recepcion_Casilleros.jpg",
+      "file8k": "Panoramas_360/Scan_02_Recepcion_Casilleros.jpg",
+      "desc": "Vista 360\u00b0 real del mostrador lateral y zona de casilleros.",
+      "x": -4.375,
+      "y": -0.024,
+      "z": 1.383,
+      "neighbors": [
+        "scan_01",
+        "scan_03"
+      ],
+      "mapPos": {
+        "x": 59.0,
+        "y": 75.8
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_01",
+          "name": "Entrada y Mostrador de Recepci\u00f3n",
+          "dist": 4.37,
+          "yaw": 89.9,
+          "pitch": -15.4
+        },
+        {
+          "id": "scan_03",
+          "name": "Sala Central de Lectura y Estudio",
+          "dist": 4.51,
+          "yaw": -90.4,
+          "pitch": -14.9
+        }
+      ],
+      "svg_pos": {
+        "x": 13.625,
+        "y": 18.524,
+        "pct_x": 60.56,
+        "pct_y": 77.18
+      }
+    },
+    {
+      "id": "scan_03",
+      "name": "3. Sala Central de Lectura y Estudio",
+      "file4k": "Panoramas_4K/Scan_03_Mesas_Estudio_Central.jpg",
+      "file8k": "Panoramas_360/Scan_03_Mesas_Estudio_Central.jpg",
+      "desc": "Vista 360\u00b0 real de las mesas de trabajo compartidas e iluminaci\u00f3n natural.",
+      "x": -8.883,
+      "y": -0.059,
+      "z": 1.38,
+      "neighbors": [
+        "scan_01",
+        "scan_02",
+        "scan_04",
+        "scan_05"
+      ],
+      "mapPos": {
+        "x": 39.4,
+        "y": 76.0
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_01",
+          "name": "Entrada y Mostrador de Recepci\u00f3n",
+          "dist": 8.88,
+          "yaw": 89.7,
+          "pitch": -7.7
+        },
+        {
+          "id": "scan_02",
+          "name": "Recepci\u00f3n y Casilleros de Estudiantes",
+          "dist": 4.51,
+          "yaw": 89.6,
+          "pitch": -14.9
+        },
+        {
+          "id": "scan_04",
+          "name": "Corredor hacia Estanter\u00edas",
+          "dist": 2.87,
+          "yaw": -13.3,
+          "pitch": -22.5
+        },
+        {
+          "id": "scan_05",
+          "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+          "dist": 3.4,
+          "yaw": -38.1,
+          "pitch": -19.5
+        }
+      ],
+      "svg_pos": {
+        "x": 9.117,
+        "y": 18.559,
+        "pct_x": 40.52,
+        "pct_y": 77.33
+      }
+    },
+    {
+      "id": "scan_04",
+      "name": "4. Corredor hacia Estanter\u00edas",
+      "file4k": "Panoramas_4K/Scan_04_Corredor_Estanterias.jpg",
+      "file8k": "Panoramas_360/Scan_04_Corredor_Estanterias.jpg",
+      "desc": "Vista 360\u00b0 real del pasillo de transici\u00f3n entre mesas y estanter\u00edas.",
+      "x": -9.546,
+      "y": 2.735,
+      "z": 1.388,
+      "neighbors": [
+        "scan_03",
+        "scan_05",
+        "scan_06"
+      ],
+      "mapPos": {
+        "x": 36.5,
+        "y": 64.8
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_03",
+          "name": "Sala Central de Lectura y Estudio",
+          "dist": 2.87,
+          "yaw": 166.7,
+          "pitch": -22.8
+        },
+        {
+          "id": "scan_05",
+          "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+          "dist": 1.44,
+          "yaw": -94.6,
+          "pitch": -40.0
+        },
+        {
+          "id": "scan_06",
+          "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+          "dist": 2.87,
+          "yaw": -95.1,
+          "pitch": -22.9
+        }
+      ],
+      "svg_pos": {
+        "x": 8.454,
+        "y": 15.765,
+        "pct_x": 37.57,
+        "pct_y": 65.69
+      }
+    },
+    {
+      "id": "scan_05",
+      "name": "5. Pasillo Principal de Estanter\u00edas (Libros)",
+      "file4k": "Panoramas_4K/Scan_05_Pasillo_Estanterias_A.jpg",
+      "file8k": "Panoramas_360/Scan_05_Pasillo_Estanterias_A.jpg",
+      "desc": "Vista 360\u00b0 real del acervo bibliogr\u00e1fico con libros y estanter\u00edas.",
+      "x": -10.983,
+      "y": 2.62,
+      "z": 1.377,
+      "neighbors": [
+        "scan_04",
+        "scan_06",
+        "scan_07"
+      ],
+      "mapPos": {
+        "x": 30.3,
+        "y": 65.3
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_04",
+          "name": "Corredor hacia Estanter\u00edas",
+          "dist": 1.44,
+          "yaw": 85.4,
+          "pitch": -39.5
+        },
+        {
+          "id": "scan_06",
+          "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+          "dist": 1.43,
+          "yaw": -95.7,
+          "pitch": -40.0
+        },
+        {
+          "id": "scan_07",
+          "name": "Pasillo Interior de Acervo Especializado",
+          "dist": 2.39,
+          "yaw": -57.1,
+          "pitch": -26.6
+        }
+      ],
+      "svg_pos": {
+        "x": 7.0169999999999995,
+        "y": 15.879999999999999,
+        "pct_x": 31.19,
+        "pct_y": 66.17
+      }
+    },
+    {
+      "id": "scan_06",
+      "name": "6. Pasillo de Estanter\u00edas y Extintor Rojo",
+      "file4k": "Panoramas_4K/Scan_06_Pasillo_Estanterias_B.jpg",
+      "file8k": "Panoramas_360/Scan_06_Pasillo_Estanterias_B.jpg",
+      "desc": "Vista 360\u00b0 real junto al revistero y se\u00f1al\u00e9tica de seguridad.",
+      "x": -12.409,
+      "y": 2.477,
+      "z": 1.373,
+      "neighbors": [
+        "scan_04",
+        "scan_05",
+        "scan_07"
+      ],
+      "mapPos": {
+        "x": 24.1,
+        "y": 65.8
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_04",
+          "name": "Corredor hacia Estanter\u00edas",
+          "dist": 2.87,
+          "yaw": 84.9,
+          "pitch": -22.4
+        },
+        {
+          "id": "scan_05",
+          "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+          "dist": 1.43,
+          "yaw": 84.3,
+          "pitch": -39.8
+        },
+        {
+          "id": "scan_07",
+          "name": "Pasillo Interior de Acervo Especializado",
+          "dist": 1.56,
+          "yaw": -22.0,
+          "pitch": -37.5
+        }
+      ],
+      "svg_pos": {
+        "x": 5.590999999999999,
+        "y": 16.023,
+        "pct_x": 24.85,
+        "pct_y": 66.76
+      }
+    },
+    {
+      "id": "scan_07",
+      "name": "7. Pasillo Interior de Acervo Especializado",
+      "file4k": "Panoramas_4K/Scan_07_Pasillo_Interior_Libros.jpg",
+      "file8k": "Panoramas_360/Scan_07_Pasillo_Interior_Libros.jpg",
+      "desc": "Vista 360\u00b0 real de la galer\u00eda profunda de estanter\u00edas cient\u00edficas.",
+      "x": -12.993,
+      "y": 3.921,
+      "z": 1.376,
+      "neighbors": [
+        "scan_05",
+        "scan_06"
+      ],
+      "mapPos": {
+        "x": 21.6,
+        "y": 60.1
+      },
+      "computedNeighbors": [
+        {
+          "id": "scan_05",
+          "name": "Pasillo Principal de Estanter\u00edas (Libros)",
+          "dist": 2.39,
+          "yaw": 122.9,
+          "pitch": -26.6
+        },
+        {
+          "id": "scan_06",
+          "name": "Pasillo de Estanter\u00edas y Extintor Rojo",
+          "dist": 1.56,
+          "yaw": 158.0,
+          "pitch": -37.7
+        }
+      ],
+      "svg_pos": {
+        "x": 5.007,
+        "y": 14.579,
+        "pct_x": 22.25,
+        "pct_y": 60.75
+      }
+    }
+  ],
+  "viewBox": "0 0 22.50 24.00"
+}

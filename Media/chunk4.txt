@@ -1,0 +1,187 @@
+"floorVisibility" : [ {
+              "id" : "tsmq1wak12rhgn0mawksxcwcd",
+              "meshId" : 0,
+              "sequence" : 0
+            } ],
+            "anchor" : {
+              "id" : "c02taqqhbp6s0uef00q709dpc",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "c02taqqhbp6s0uef00q709dpc",
+                "sweepUuid" : "7f1813b5a08642c2a60ff6eb6d629236",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "D2p5dxS7qgi",
+          "label" : "11.25.2026_13.35.39",
+          "classification" : null,
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4096,
+          "width" : 8192,
+          "created" : "2026-11-25T18:35:57Z",
+          "modified" : "2026-11-25T18:35:57Z",
+          "status" : "available",
+          "filename" : "11252026_133539.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/D2p5dxS7qgi/11.25.2026_13.35.39.jpg?t=2-3d86a57574d97c6dbed277d350b674cf7db2bd8a-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/D2p5dxS7qgi/11.25.2026_13.35.39.jpg?t=2-3d86a57574d97c6dbed277d350b674cf7db2bd8a-1795633476-1&download=11252026_133539.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "equirectangular",
+          "origin" : "user",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/D2p5dxS7qgi/11.25.2026_13.35.39.jpg?t=2-3d86a57574d97c6dbed277d350b674cf7db2bd8a-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/D2p5dxS7qgi/11.25.2026_13.35.39.jpg?t=2-3d86a57574d97c6dbed277d350b674cf7db2bd8a-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -10.98293399810791,
+              "y" : 2.6196258068084717,
+              "z" : 1.376940131187439
+            },
+            "rotation" : {
+              "x" : -0.6634456114351509,
+              "y" : -0.3063149062852883,
+              "z" : 0.2861542143900057,
+              "w" : 0.6197796902312901
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ {
+              "id" : "tsmq1wak12rhgn0mawksxcwcd",
+              "meshId" : 0,
+              "sequence" : 0
+            } ],
+            "anchor" : {
+              "id" : "n2gttwkag97agy337fi1sskhd",
+              "tags" : [ "showcase" ],
+              "pano" : {
+                "id" : "n2gttwkag97agy337fi1sskhd",
+                "sweepUuid" : "077e602650814b0bb3a5efba0bdce686",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "GEe2LN2S2F3",
+          "label" : "Other",
+          "classification" : "Other",
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4320,
+          "width" : 7680,
+          "created" : "2026-11-25T15:30:52Z",
+          "modified" : "2026-11-25T15:30:53Z",
+          "status" : "available",
+          "filename" : "Other.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/GEe2LN2S2F3/GEe2LN2S2F3-Other.jpg?t=2-e8afd7aba9ce5a783d96d082f8a2f8d8821cfbb2-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/GEe2LN2S2F3/GEe2LN2S2F3-Other.jpg?t=2-e8afd7aba9ce5a783d96d082f8a2f8d8821cfbb2-1795633476-1&download=Other.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "photo2D",
+          "origin" : "vision",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/GEe2LN2S2F3/GEe2LN2S2F3-Other.jpg?t=2-e8afd7aba9ce5a783d96d082f8a2f8d8821cfbb2-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/GEe2LN2S2F3/GEe2LN2S2F3-Other.jpg?t=2-e8afd7aba9ce5a783d96d082f8a2f8d8821cfbb2-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -8.882622718811035,
+              "y" : -0.05901351198554039,
+              "z" : 1.380371332168579
+            },
+            "rotation" : {
+              "x" : 0.7146281975285445,
+              "y" : -0.16763886679821266,
+              "z" : 0.15509892720417096,
+              "w" : -0.6611717550931457
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ ],
+            "anchor" : {
+              "id" : "8dawkyy9mp601tghpu3yg89wb",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "8dawkyy9mp601tghpu3yg89wb",
+                "sweepUuid" : "b718afd28990407e997fc6a662c39a17",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "AxqWZsVRbtg",
+          "label" : "Other",
+          "classification" : "Other",
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4320,
+          "width" : 7680,
+          "created" : "2026-11-25T15:30:52Z",
+          "modified" : "2026-11-25T15:30:52Z",
+          "status" : "available",
+          "filename" : "Other.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/AxqWZsVRbtg/AxqWZsVRbtg-Other.jpg?t=2-0d4d24847b9c14fdeaf61be36bcbdff2dee303bf-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/AxqWZsVRbtg/AxqWZsVRbtg-Other.jpg?t=2-0d4d24847b9c14fdeaf61be36bcbdff2dee303bf-1795633476-1&download=Other.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "photo2D",
+          "origin" : "vision",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/AxqWZsVRbtg/AxqWZsVRbtg-Other.jpg?t=2-0d4d24847b9c14fdeaf61be36bcbdff2dee303bf-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/AxqWZsVRbtg/AxqWZsVRbtg-Other.jpg?t=2-0d4d24847b9c14fdeaf61be36bcbdff2dee303bf-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -0.0026596859097480774,
+              "y" : -0.018474992364645004,
+              "z" : 1.3818299770355225
+            },
+            "rotation" : {
+              "x" : 0.4318548335091632,
+              "y" : 0.5911400804505803,
+              "z" : -0.5500660916559604,
+              "w" : -0.4018483722712951
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ ],
+            "anchor" : {
+              "id" : "08du3ks8ds258scq0tdmwhpfc",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "08du3ks8ds258scq0tdmwhpfc",
+                "sweepUuid" : "de1e3f3d39884fd6a2b0f250e16689fe",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        } ]
+      },
+      "defurnishedViews" : [ ]
+    }
+  }
+}

@@ -1,0 +1,179 @@
+6689fe",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "SSFeu2Q8Ttj",
+          "label" : "Dollhouse View",
+          "classification" : "Dollhouse View",
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4320,
+          "width" : 7680,
+          "created" : "2026-11-25T15:30:52Z",
+          "modified" : "2026-11-25T15:30:52Z",
+          "status" : "available",
+          "filename" : "Dollhouse-View.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/SSFeu2Q8Ttj/SSFeu2Q8Ttj-Dollhouse_View.jpg?t=2-e10a1821c5221bafa27a7ec3a1d935c9e7dee40a-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/SSFeu2Q8Ttj/SSFeu2Q8Ttj-Dollhouse_View.jpg?t=2-e10a1821c5221bafa27a7ec3a1d935c9e7dee40a-1795633476-1&download=Dollhouse-View.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "photo2D",
+          "origin" : "vision",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/SSFeu2Q8Ttj/SSFeu2Q8Ttj-Dollhouse_View.jpg?t=2-e10a1821c5221bafa27a7ec3a1d935c9e7dee40a-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/SSFeu2Q8Ttj/SSFeu2Q8Ttj-Dollhouse_View.jpg?t=2-e10a1821c5221bafa27a7ec3a1d935c9e7dee40a-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "dollhouse",
+            "position" : {
+              "x" : 16.970321655273438,
+              "y" : -14.998822212219238,
+              "z" : 19.256683349609375
+            },
+            "rotation" : {
+              "x" : 0.8076247799572972,
+              "y" : 0.376368018384822,
+              "z" : -0.19175850837048342,
+              "w" : -0.4114827192431082
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ ],
+            "anchor" : null
+          }
+        }, {
+          "id" : "a9E9Js6UoXg",
+          "label" : "11.25.2026_13.32.02",
+          "classification" : null,
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4096,
+          "width" : 8192,
+          "created" : "2026-11-25T18:32:12Z",
+          "modified" : "2026-11-25T18:32:12Z",
+          "status" : "available",
+          "filename" : "11252026_133202.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/a9E9Js6UoXg/11.25.2026_13.32.02.jpg?t=2-79e86a9983821176ef28d3c035513b29cf59dd23-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/a9E9Js6UoXg/11.25.2026_13.32.02.jpg?t=2-79e86a9983821176ef28d3c035513b29cf59dd23-1795633476-1&download=11252026_133202.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "equirectangular",
+          "origin" : "user",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/a9E9Js6UoXg/11.25.2026_13.32.02.jpg?t=2-79e86a9983821176ef28d3c035513b29cf59dd23-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/a9E9Js6UoXg/11.25.2026_13.32.02.jpg?t=2-79e86a9983821176ef28d3c035513b29cf59dd23-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -4.374781131744385,
+              "y" : -0.024099938571453094,
+              "z" : 1.382506012916565
+            },
+            "rotation" : {
+              "x" : -0.6634456114351509,
+              "y" : -0.3063149062852883,
+              "z" : 0.2861542143900057,
+              "w" : 0.6197796902312901
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ {
+              "id" : "tsmq1wak12rhgn0mawksxcwcd",
+              "meshId" : 0,
+              "sequence" : 0
+            } ],
+            "anchor" : {
+              "id" : "xqi3hehpd46ucz70hb4cttdec",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "xqi3hehpd46ucz70hb4cttdec",
+                "sweepUuid" : "8f34361c87ca41b3a20e1016827b76a2",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "NPNH5NdrvPU",
+          "label" : "Other",
+          "classification" : "Other",
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 4320,
+          "width" : 7680,
+          "created" : "2026-11-25T15:30:52Z",
+          "modified" : "2026-11-25T15:30:52Z",
+          "status" : "available",
+          "filename" : "Other.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/NPNH5NdrvPU/NPNH5NdrvPU-Other.jpg?t=2-d6cc188c981df2b5588a0165dbec8f0d0177c9e6-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/NPNH5NdrvPU/NPNH5NdrvPU-Other.jpg?t=2-d6cc188c981df2b5588a0165dbec8f0d0177c9e6-1795633476-1&download=Other.jpg",
+          "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+          "type" : "photo2D",
+          "origin" : "vision",
+          "validUntil" : "2026-11-25T19:04:36Z",
+          "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/NPNH5NdrvPU/NPNH5NdrvPU-Other.jpg?t=2-d6cc188c981df2b5588a0165dbec8f0d0177c9e6-1795633476-1&width=200&height=140&fit=crop&disable=upscale",
+          "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/NPNH5NdrvPU/NPNH5NdrvPU-Other.jpg?t=2-d6cc188c981df2b5588a0165dbec8f0d0177c9e6-1795633476-1&width=1920&height=1080&fit=crop&disable=upscale",
+          "snapshotLocation" : {
+            "viewMode" : "panorama",
+            "position" : {
+              "x" : -4.374781131744385,
+              "y" : -0.024099938571453094,
+              "z" : 1.382506012916565
+            },
+            "rotation" : {
+              "x" : -0.4652825130494637,
+              "y" : 0.5674635654046455,
+              "z" : -0.5253256277220658,
+              "w" : 0.4307322086364371
+            },
+            "focalDistance" : null,
+            "zoom" : 1.0,
+            "floorVisibility" : [ ],
+            "anchor" : {
+              "id" : "xqi3hehpd46ucz70hb4cttdec",
+              "tags" : [ "showcase", "vr" ],
+              "pano" : {
+                "id" : "xqi3hehpd46ucz70hb4cttdec",
+                "sweepUuid" : "8f34361c87ca41b3a20e1016827b76a2",
+                "placement" : "auto"
+              },
+              "room" : {
+                "id" : "613htqkzf66zz7hf7n8kzszed"
+              }
+            }
+          }
+        }, {
+          "id" : "P5fieVAV825",
+          "label" : "11.25.2026_13.27.15",
+          "classification" : null,
+          "category" : "snapshot",
+          "model" : {
+            "id" : "Hmqbdxnc2cV",
+            "rootModelId" : "Hmqbdxnc2cV"
+          },
+          "height" : 3413,
+          "width" : 6068,
+          "created" : "2026-11-25T18:27:22Z",
+          "modified" : "2026-11-25T18:27:22Z",
+          "status" : "available",
+          "filename" : "11252026_132715.jpg",
+          "format" : "image",
+          "url" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/P5fieVAV825/11.25.2026_13.27.15.jpg?t=2-52ea14bd8364a3758b25c9635cbea997552d88f7-1795633476-1",
+          "downloadUrl" : "https://cdn-2.matterport.com/apifs/models/Hmqbdxnc2cV/images/P5fieVAV825/11.25.2026_13.27.15.jpg?t=2-52ea14bd8364a3758b25c9635cbea997552d88f7-1795633476-1&download=11252026_132715.jpg",
+   

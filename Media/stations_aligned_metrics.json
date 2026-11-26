@@ -1,0 +1,315 @@
+[
+  {
+    "id": "scan_01",
+    "name": "1. Entrada y Mostrador de Recepción",
+    "zone": "Puerta de Entrada Principal",
+    "corridor": "Corredor Principal de Acceso (Inicio)",
+    "file4k": "Panoramas_4K/Scan_01_Entrada_Recepcion.jpg",
+    "file8k": "Panoramas_360/Scan_01_Entrada_Recepcion.jpg",
+    "desc": "Acceso por la puerta principal. Al frente: corredor central hacia mesas. Atrás: puerta de vidrio al exterior.",
+    "x": -0.003,
+    "y": -0.018,
+    "z": 1.382,
+    "mapPos": {
+      "x": 80.0,
+      "y": 77.2
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 1,
+        "id": "scan_02",
+        "name": "2. Recepción y Casilleros de Estudiantes",
+        "zone": "Zona de Casilleros y Mostrador",
+        "dist": "4.37 m",
+        "desc": "Avanzar por el pasillo hacia Recepción",
+        "yaw": -0.1,
+        "pitch": -14.1
+      },
+      {
+        "targetIdx": 2,
+        "id": "scan_03",
+        "name": "3. Sala Central de Lectura y Estudio",
+        "zone": "Sala Central de Mesas de Trabajo",
+        "dist": "8.88 m",
+        "desc": "Avanzar directo a Sala Central de Lectura",
+        "yaw": -0.3,
+        "pitch": -7.1
+      }
+    ]
+  },
+  {
+    "id": "scan_02",
+    "name": "2. Recepción y Casilleros de Estudiantes",
+    "zone": "Zona de Casilleros y Mostrador",
+    "corridor": "Corredor Principal de Acceso (Medio)",
+    "file4k": "Panoramas_4K/Scan_02_Recepcion_Casilleros.jpg",
+    "file8k": "Panoramas_360/Scan_02_Recepcion_Casilleros.jpg",
+    "desc": "Pasillo central entre mostrador de atención y casilleros estudiantiles.",
+    "x": -4.375,
+    "y": -0.024,
+    "z": 1.383,
+    "mapPos": {
+      "x": 60.6,
+      "y": 77.2
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 0,
+        "id": "scan_01",
+        "name": "1. Entrada y Mostrador de Recepción",
+        "zone": "Puerta de Entrada Principal",
+        "dist": "4.37 m",
+        "desc": "Regresar a la Puerta de Entrada",
+        "yaw": 179.9,
+        "pitch": -14.1
+      },
+      {
+        "targetIdx": 2,
+        "id": "scan_03",
+        "name": "3. Sala Central de Lectura y Estudio",
+        "zone": "Sala Central de Mesas de Trabajo",
+        "dist": "4.51 m",
+        "desc": "Continuar a Sala Central de Lectura",
+        "yaw": -0.4,
+        "pitch": -13.7
+      }
+    ]
+  },
+  {
+    "id": "scan_03",
+    "name": "3. Sala Central de Lectura y Estudio",
+    "zone": "Sala Central de Mesas de Trabajo",
+    "corridor": "Bifurcación: Inicio de Corredor hacia Estanterías",
+    "file4k": "Panoramas_4K/Scan_03_Mesas_Estudio_Central.jpg",
+    "file8k": "Panoramas_360/Scan_03_Mesas_Estudio_Central.jpg",
+    "desc": "Amplia zona de mesas compartidas. A la derecha inicia el corredor de estanterías y libros.",
+    "x": -8.883,
+    "y": -0.059,
+    "z": 1.38,
+    "mapPos": {
+      "x": 40.5,
+      "y": 77.3
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 1,
+        "id": "scan_02",
+        "name": "2. Recepción y Casilleros de Estudiantes",
+        "zone": "Zona de Casilleros y Mostrador",
+        "dist": "4.51 m",
+        "desc": "Regresar por el pasillo a Recepción",
+        "yaw": 179.6,
+        "pitch": -13.7
+      },
+      {
+        "targetIdx": 3,
+        "id": "scan_04",
+        "name": "4. Inicio de Corredor hacia Estanterías",
+        "zone": "Entrada al Acervo Bibliográfico",
+        "dist": "2.87 m",
+        "desc": "Ingresar al Corredor de Estanterías (Derecha)",
+        "yaw": 76.7,
+        "pitch": -20.8
+      },
+      {
+        "targetIdx": 4,
+        "id": "scan_05",
+        "name": "5. Pasillo Principal de Libros A",
+        "zone": "Estanterías de Consulta General",
+        "dist": "3.40 m",
+        "desc": "Pasillo Principal de Libros A",
+        "yaw": 51.9,
+        "pitch": -18.0
+      }
+    ]
+  },
+  {
+    "id": "scan_04",
+    "name": "4. Inicio de Corredor hacia Estanterías",
+    "zone": "Entrada al Acervo Bibliográfico",
+    "corridor": "Inicio Pasillo Estanterías (Empieza aquí)",
+    "file4k": "Panoramas_4K/Scan_04_Corredor_Estanterias.jpg",
+    "file8k": "Panoramas_360/Scan_04_Corredor_Estanterias.jpg",
+    "desc": "Punto de inicio del corredor de estanterías. Hacia la izquierda: pasillos de libros A y B.",
+    "x": -9.546,
+    "y": 2.735,
+    "z": 1.388,
+    "mapPos": {
+      "x": 37.6,
+      "y": 65.7
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 2,
+        "id": "scan_03",
+        "name": "3. Sala Central de Lectura y Estudio",
+        "zone": "Sala Central de Mesas de Trabajo",
+        "dist": "2.87 m",
+        "desc": "Regresar a Sala Central de Lectura",
+        "yaw": -103.3,
+        "pitch": -21.1
+      },
+      {
+        "targetIdx": 4,
+        "id": "scan_05",
+        "name": "5. Pasillo Principal de Libros A",
+        "zone": "Estanterías de Consulta General",
+        "dist": "1.44 m",
+        "desc": "Entrar a Pasillo de Libros A",
+        "yaw": -4.6,
+        "pitch": -37.6
+      },
+      {
+        "targetIdx": 5,
+        "id": "scan_06",
+        "name": "6. Pasillo de Libros B (Extintor y Revistero)",
+        "zone": "Estanterías de Ciencias y Revistas",
+        "dist": "2.87 m",
+        "desc": "Pasillo de Libros B / Extintor",
+        "yaw": -5.1,
+        "pitch": -21.2
+      }
+    ]
+  },
+  {
+    "id": "scan_05",
+    "name": "5. Pasillo Principal de Libros A",
+    "zone": "Estanterías de Consulta General",
+    "corridor": "Pasillo de Libros A (Estanterías de Álgebra y Cálculo)",
+    "file4k": "Panoramas_4K/Scan_05_Pasillo_Estanterias_A.jpg",
+    "file8k": "Panoramas_360/Scan_05_Pasillo_Estanterias_A.jpg",
+    "desc": "Pasillo flanqueado por estanterías de matemáticas, física y ciencias exactas.",
+    "x": -10.983,
+    "y": 2.62,
+    "z": 1.377,
+    "mapPos": {
+      "x": 31.2,
+      "y": 66.2
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 3,
+        "id": "scan_04",
+        "name": "4. Inicio de Corredor hacia Estanterías",
+        "zone": "Entrada al Acervo Bibliográfico",
+        "dist": "1.44 m",
+        "desc": "Regresar al Inicio del Corredor",
+        "yaw": 175.4,
+        "pitch": -37.1
+      },
+      {
+        "targetIdx": 5,
+        "id": "scan_06",
+        "name": "6. Pasillo de Libros B (Extintor y Revistero)",
+        "zone": "Estanterías de Ciencias y Revistas",
+        "dist": "1.43 m",
+        "desc": "Avanzar a Pasillo de Libros B",
+        "yaw": -5.7,
+        "pitch": -37.6
+      },
+      {
+        "targetIdx": 6,
+        "id": "scan_07",
+        "name": "7. Pasillo Interior de Acervo Especializado",
+        "zone": "Galería de Biología y Botánica",
+        "dist": "2.39 m",
+        "desc": "Pasillo Interior Acervo Fondo",
+        "yaw": 32.9,
+        "pitch": -24.7
+      }
+    ]
+  },
+  {
+    "id": "scan_06",
+    "name": "6. Pasillo de Libros B (Extintor y Revistero)",
+    "zone": "Estanterías de Ciencias y Revistas",
+    "corridor": "Pasillo de Libros B (Junto a Revistero 'Cumbres')",
+    "file4k": "Panoramas_4K/Scan_06_Pasillo_Estanterias_B.jpg",
+    "file8k": "Panoramas_360/Scan_06_Pasillo_Estanterias_B.jpg",
+    "desc": "Pasillo de estanterías junto al revistero institucional y puerta de seguridad.",
+    "x": -12.409,
+    "y": 2.477,
+    "z": 1.373,
+    "mapPos": {
+      "x": 24.9,
+      "y": 66.8
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 3,
+        "id": "scan_04",
+        "name": "4. Inicio de Corredor hacia Estanterías",
+        "zone": "Entrada al Acervo Bibliográfico",
+        "dist": "2.87 m",
+        "desc": "Regresar al Inicio del Corredor",
+        "yaw": 174.9,
+        "pitch": -20.7
+      },
+      {
+        "targetIdx": 4,
+        "id": "scan_05",
+        "name": "5. Pasillo Principal de Libros A",
+        "zone": "Estanterías de Consulta General",
+        "dist": "1.43 m",
+        "desc": "Regresar a Pasillo de Libros A",
+        "yaw": 174.3,
+        "pitch": -37.4
+      },
+      {
+        "targetIdx": 6,
+        "id": "scan_07",
+        "name": "7. Pasillo Interior de Acervo Especializado",
+        "zone": "Galería de Biología y Botánica",
+        "dist": "1.56 m",
+        "desc": "Entrar a Acervo Interior Fondo",
+        "yaw": 68.0,
+        "pitch": -35.2
+      }
+    ]
+  },
+  {
+    "id": "scan_07",
+    "name": "7. Pasillo Interior de Acervo Especializado",
+    "zone": "Galería de Biología y Botánica",
+    "corridor": "Acervo Especializado Interior (Fondo)",
+    "file4k": "Panoramas_4K/Scan_07_Pasillo_Interior_Libros.jpg",
+    "file8k": "Panoramas_360/Scan_07_Pasillo_Interior_Libros.jpg",
+    "desc": "Zona profunda de la biblioteca con colecciones de biología de plantas, botánica y ecología.",
+    "x": -12.993,
+    "y": 3.921,
+    "z": 1.376,
+    "mapPos": {
+      "x": 22.3,
+      "y": 60.8
+    },
+    "initialYaw": 0.0,
+    "neighbors": [
+      {
+        "targetIdx": 4,
+        "id": "scan_05",
+        "name": "5. Pasillo Principal de Libros A",
+        "zone": "Estanterías de Consulta General",
+        "dist": "2.39 m",
+        "desc": "Salir a Pasillo Principal Libros A",
+        "yaw": -147.1,
+        "pitch": -24.7
+      },
+      {
+        "targetIdx": 5,
+        "id": "scan_06",
+        "name": "6. Pasillo de Libros B (Extintor y Revistero)",
+        "zone": "Estanterías de Ciencias y Revistas",
+        "dist": "1.56 m",
+        "desc": "Salir a Pasillo Libros B / Extintor",
+        "yaw": -112.0,
+        "pitch": -35.3
+      }
+    ]
+  }
+]
